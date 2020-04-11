@@ -48,7 +48,7 @@ function HomePage() {
       </StyledButtonRow>
       <NameColumn>
         <NameHeadline>
-          <H1>Ima sashenka</H1>
+          <H1>Hi my name is Sasha</H1>
           <S1>Bla bla bla</S1>
         </NameHeadline>
         <NameFootline>
