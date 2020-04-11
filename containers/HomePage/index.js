@@ -14,14 +14,26 @@ const ResumeButton = styled(Button)`
 
 const StyledHomePage = styled(Col)`
   width: 100%;
+  height: 100%;
+`;
+
+const NameColumn = styled(Col)`
+  height: 100%;
+  justify-content: space-between;
 `;
 
 const NameHeadline = styled(Col)`
   margin: 40px;
 
   ${H1} {
-    padding-bottom: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
+`;
+
+const NameFootline = styled(NameHeadline)`
+  align-self: flex-end;
+  text-align: end;
 `;
 
 function HomePage() {
@@ -33,10 +45,16 @@ function HomePage() {
         <Button>Contact Me</Button>
         <ResumeButton>Resume</ResumeButton>
       </StyledButtonRow>
-      <NameHeadline>
-        <H1>ASD ASD ASD ASD</H1>
-        <S1>Bla bla bla</S1>
-      </NameHeadline>
+      <NameColumn>
+        <NameHeadline>
+          <H1>ASD ASD ASD ASD</H1>
+          <S1>Bla bla bla</S1>
+        </NameHeadline>
+        <NameFootline>
+          <S1>Bla bla bla</S1>
+          <H1>ASD ASD ASD ASD</H1>
+        </NameFootline>
+      </NameColumn>
     </StyledHomePage>
   );
 }

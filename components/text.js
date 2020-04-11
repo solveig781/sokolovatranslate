@@ -17,8 +17,8 @@ const textColor = createTheme('mode', {
 const HeaderGenerator = index => styled.span`
   color: ${textColor};
   font-size: ${textSize(index) * 2}em;
-  padding-top: ${40 * ((6 - index) / 6)}px;
-  padding-bottom: ${40 * ((6 - index) / 6)}px;
+  margin-top: ${40 * ((6 - index) / 6)}px;
+  margin-bottom: ${40 * ((6 - index) / 6)}px;
 `;
 
 const TextGenerator = index => styled.span`
