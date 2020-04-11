@@ -53,7 +53,9 @@ function Page({
         background={background}
       >
         <ScrollDirection scrollUp={scrollUp} />
-        <Col {...flexProps}>{children}</Col>
+        <Col expand {...flexProps}>
+          {children}
+        </Col>
         <ScrollDirection scrollDown={scrollDown} />
       </PageWrapper>
     </ThemeProvider>

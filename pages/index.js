@@ -1,13 +1,16 @@
 import React from 'react';
 
 import { Page } from 'components';
-import { Header, Portfolio, Contact } from 'containers';
+
+import HomePage from 'containers/HomePage';
+import Contact from 'containers/contact';
+import Portfolio from 'containers/portfolio';
 
 function Index() {
   return (
     <>
       <Page scrollDown fullHeight>
-        <Header />
+        <HomePage />
       </Page>
       <Page scrollUp scrollDown fullHeight>
         <Portfolio />

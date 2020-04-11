@@ -24,8 +24,8 @@ const GlobalStyling = createGlobalStyle`
 
     color: black;
     background: white;
-    font-family: 'IBM Plex Mono', sans-serif;
- }
+    font-family: 'Comfortaa', cursive;
+  }
 `;
 
 function AppWrapper({ Component, pageProps, user }) {

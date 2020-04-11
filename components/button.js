@@ -22,7 +22,7 @@ export default styled.button`
   border: none;
   display: inline-block;
 
-  padding: 8px;
+  padding: 40px;
   border-radius: 5px;
 
   cursor: pointer;

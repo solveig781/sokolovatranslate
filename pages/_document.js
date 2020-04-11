@@ -109,8 +109,8 @@ export default class DefaultDocument extends Document {
           {/* Nicer fonts */}
           <link
             async
+            href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap"
           />
         </Head>
         <body>
