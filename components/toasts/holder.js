@@ -1,0 +1,21 @@
+import React from 'react';
+import styled from 'styled-components';
+import ButterToast, { POS_TOP, POS_CENTER } from 'butter-toast';
+
+const ButterToastStyled = styled(ButterToast)`
+  z-index: 200;
+`;
+
+function Toasts({ className }) {
+  return (
+    <ButterToastStyled
+      className={className}
+      position={{
+        vertical: POS_TOP,
+        horizontal: POS_CENTER,
+      }}
+    />
+  );
+}
+
+export default Toasts;
