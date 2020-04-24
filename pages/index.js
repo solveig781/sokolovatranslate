@@ -9,13 +9,13 @@ import Portfolio from 'containers/portfolio';
 function Index() {
   return (
     <>
-      <Page scrollDown fullHeight>
+      <Page fullHeight>
         <HomePage />
       </Page>
-      <Page scrollUp scrollDown fullHeight>
+      <Page fullHeight>
         <Portfolio />
       </Page>
-      <Page scrollUp fullHeight>
+      <Page fullHeight>
         <Contact />
       </Page>
     </>
