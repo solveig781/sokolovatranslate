@@ -48,12 +48,12 @@ function HomePage() {
       </StyledButtonRow>
       <NameColumn>
         <NameHeadline>
-          <H1>Hi my name is Sasha</H1>
-          <S1>Bla bla bla</S1>
+          <H1>ENGLISH - RUSSIAN TRANSLATION</H1>
+          <S1>Aleksandra Sokolova</S1>
         </NameHeadline>
         <NameFootline>
-          <S1>Bla bla bla</S1>
-          <H1>ASD ASD ASD ASD</H1>
+          <S1>Александра Соколова</S1>
+          <H1>ПЕРЕВОД С АНГЛИЙСКОГО НА РУССКИЙ</H1>
         </NameFootline>
       </NameColumn>
     </StyledHomePage>
