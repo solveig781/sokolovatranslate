@@ -6,8 +6,6 @@ import { Row, Col } from 'components';
 const PageStyle = styled(Col)`
   background: #ffcc88;
   height: 100%;
-  align-items: center;
-  justify-content: space-between;
 `;
 
 const Header = styled(Row)`
@@ -15,17 +13,16 @@ const Header = styled(Row)`
 `;
 
 const Boxes = styled(Col)`
+  flex-grow: 1;
+
+  margin-right: 40px;
   background: whitesmoke;
-  width: 30%;
 `;
 
 const Preview = styled(Row)`
+  flex-grow: 1;
+
   background: whitesmoke;
-  width: 55%;
-  height: 70%;
-  margin-right: 3%;
-  flex-wrap: wrap;
-  align-itmes: ;
   border: 1px solid black;
 `;
 
@@ -42,11 +39,17 @@ const Box = styled.div`
   max-height: 60px;
 `;
 
+const ContentContainer = styled(Row)`
+  flex-grow: 1;
+
+  margin: 40px;
+`;
+
 function WhyPickMe() {
   return (
     <PageStyle>
       <Header>How I Translate</Header>
-      <Row>
+      <ContentContainer>
         <Boxes>
           <Box>First Box</Box>
           <Box>Second Box</Box>
@@ -56,7 +59,7 @@ function WhyPickMe() {
           <Box>Sixth Box</Box>
         </Boxes>
         <Preview>Right Panel</Preview>
-      </Row>
+      </ContentContainer>
     </PageStyle>
   );
 }
