@@ -3,10 +3,12 @@ import styled from 'styled-components';
 function addHoverEffect({ disabled }) {
   if (disabled) return '';
 
-  return `&:hover {
+  return `
+  &:hover {
       color: black;
-      background: lightblue;
-    }`;
+      background: white;
+  }
+  `;
 }
 
 function addDisabledEffect({ disabled }) {
@@ -23,18 +25,22 @@ export default styled.button`
   display: inline-block;
 
   padding: 40px;
-  border-radius: 5px;
 
   cursor: pointer;
   user-select: none;
 
-  color: #333333;
-  background: white;
+  color: white;
+  background: none;
   text-transform: uppercase;
   transition: all 0.4s ease 0s;
+  border-bottom: 1px solid #cbffe1;
 
   &:focus {
     outline: none;
+  }
+
+  > * {
+    margin-right: 10px;
   }
 
   ${addHoverEffect}

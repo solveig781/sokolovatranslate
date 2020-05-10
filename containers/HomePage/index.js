@@ -6,6 +6,10 @@ import { Col, Row, H1, S1, Button } from 'components';
 const StyledButtonRow = styled(Row)`
   width: 100%;
   justify-content: flex-start;
+
+  > ${Button} {
+    min-width: 180px;
+  }
 `;
 
 const ResumeButton = styled(Button)`
@@ -15,6 +19,7 @@ const ResumeButton = styled(Button)`
 const StyledHomePage = styled(Col)`
   width: 100%;
   height: 100%;
+  background: #7bb3e8;
 `;
 
 const NameColumn = styled(Col)`
