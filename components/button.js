@@ -32,6 +32,7 @@ export default styled.button`
   color: white;
   background: none;
   text-transform: uppercase;
+  font-size: 14px;
   transition: all 0.4s ease 0s;
   border-bottom: 1px solid #cbffe1;
 

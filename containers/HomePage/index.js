@@ -3,6 +3,12 @@ import styled from 'styled-components';
 
 import { Col, Row, H1, S1, Button } from 'components';
 
+import LighteningIcon from './lightening';
+
+const StyledLightening = styled(Row)`
+  justify-content: center;
+`;
+
 const StyledButtonRow = styled(Row)`
   width: 100%;
   justify-content: flex-start;
@@ -17,6 +23,8 @@ const ResumeButton = styled(Button)`
 `;
 
 const StyledHomePage = styled(Col)`
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 100%;
   background: #7bb3e8;
@@ -24,7 +32,8 @@ const StyledHomePage = styled(Col)`
 
 const NameColumn = styled(Col)`
   height: 100%;
-  justify-content: space-between;
+
+  justify-content: center;
 `;
 
 const NameHeadline = styled(Col)`
@@ -33,6 +42,11 @@ const NameHeadline = styled(Col)`
   ${H1} {
     margin-top: 8px;
     margin-bottom: 8px;
+    font-size: 42px;
+  }
+  ${S1} {
+    color: #eef5d8;
+    font-size: 30px;
   }
 `;
 
@@ -49,13 +63,17 @@ function HomePage() {
         <Button>How I transalte</Button>
         <Button>Full Examples</Button>
         <Button>Contact Me</Button>
-        <ResumeButton>Resume</ResumeButton>
+        <ResumeButton>CV</ResumeButton>
       </StyledButtonRow>
       <NameColumn>
         <NameHeadline>
           <H1>ENGLISH - RUSSIAN TRANSLATION</H1>
           <S1>Aleksandra Sokolova</S1>
         </NameHeadline>
+
+        <StyledLightening>
+          <LighteningIcon />
+        </StyledLightening>
         <NameFootline>
           <S1>Александра Соколова</S1>
           <H1>ПЕРЕВОД С АНГЛИЙСКОГО НА РУССКИЙ</H1>

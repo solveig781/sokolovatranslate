@@ -56,10 +56,9 @@ const CVButton = styled(Button)`
   justify-content: space-between;
   align-items: center;
 
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 30px;
+  padding-right: 30px;
 
-  min-width: 150px;
   color: black;
 `;
 
