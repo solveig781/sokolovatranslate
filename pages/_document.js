@@ -87,29 +87,34 @@ export default class DefaultDocument extends Document {
           <meta property="og:description" content={pageDescription} />
           <meta property="og:image" content={`${hostName}thumbnail.png`} />
           <meta name="twitter:card" content="summary_large_image" />
-
           {/* For humans */}
           <link type="text/plain" rel="author" href="/humans.txt" />
-
           {/* Google structured documents */}
           <GoogleStructure />
-
           {/* Output the styles (styled-components) in the head  */}
           {this.props.styleTags}
           {/* Insert our favicon */}
           <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-
           {/* Google Analytics */}
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-156958174-1"
           />
           <script dangerouslySetInnerHTML={googleAnalytics()} />
-
           {/* Nicer fonts */}
           <link
             async
-            href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Comfortaa:wght@300&family=Montserrat&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            async
+            href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            async
+            href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Montserrat&display=swap"
             rel="stylesheet"
           />
         </Head>

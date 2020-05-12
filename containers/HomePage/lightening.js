@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Lightening({ className }) {
+export default function Lightening() {
   return (
     <svg
       width="503"

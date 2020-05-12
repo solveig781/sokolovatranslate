@@ -24,7 +24,7 @@ const GlobalStyling = createGlobalStyle`
 
     color: black;
     background: white;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Comfortaa', sans-serif;
   }
 `;
 

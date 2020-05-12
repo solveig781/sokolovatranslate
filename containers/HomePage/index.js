@@ -23,8 +23,6 @@ const ResumeButton = styled(Button)`
 `;
 
 const StyledHomePage = styled(Col)`
-  display: flex;
-  justify-content: center;
   width: 100%;
   height: 100%;
   background: #7bb3e8;
@@ -32,21 +30,26 @@ const StyledHomePage = styled(Col)`
 
 const NameColumn = styled(Col)`
   height: 100%;
-
-  justify-content: center;
 `;
 
 const NameHeadline = styled(Col)`
   margin: 40px;
 
   ${H1} {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 42px;
+    font-family: Comfortaa;
+    font-size: 35px;
+    line-height: 33px;
+    letter-spacing: 0.1em;
   }
   ${S1} {
     color: #eef5d8;
     font-size: 30px;
+    font-family: Montserrat, sans-serif;
+    margin-right: 40px;
+    margin-left: 40px;
   }
 `;
 
@@ -68,14 +71,14 @@ function HomePage() {
       <NameColumn>
         <NameHeadline>
           <H1>ENGLISH - RUSSIAN TRANSLATION</H1>
-          <S1>Aleksandra Sokolova</S1>
+          <S1>Sasha Sokolova</S1>
         </NameHeadline>
 
         <StyledLightening>
           <LighteningIcon />
         </StyledLightening>
         <NameFootline>
-          <S1>Александра Соколова</S1>
+          <S1>Саша Соколова</S1>
           <H1>ПЕРЕВОД С АНГЛИЙСКОГО НА РУССКИЙ</H1>
         </NameFootline>
       </NameColumn>

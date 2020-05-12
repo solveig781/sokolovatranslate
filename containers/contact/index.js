@@ -19,22 +19,32 @@ const PageWrapper = styled(Col)`
     #cbffe1;
 
   align-items: center;
+  display: flex;
+  justify-content: start;
   flex-grow: 1;
 `;
 
 const Header = styled(Row)`
-  background: lightyellow;
   align-items: center;
   justify-content: center;
+  position: relative;
+  right: 5%;
   margin: 80px;
+  margin-bottom: 50px;
   padding: 20px;
   width: 65%;
+
+  svg {
+    margin-right: 80px;
+    margin-bottom: 50px;
+  }
 `;
 
 const Icons = styled(Col)`
   display: flex;
   align-items: center;
   padding: 20px;
+  margin-bottom: 20px;
 `;
 
 const IconRow = styled(Row)`
@@ -43,11 +53,13 @@ const IconRow = styled(Row)`
   justify-content: space-between;
   width: 100%;
 
-  background: lightgreen;
-
   svg {
     margin-left: 20px;
     margin-right: 20px;
+  }
+  span {
+    position: relative;
+    right: 9px;
   }
 `;
 
@@ -67,12 +79,16 @@ function Contact() {
     <PageWrapper>
       <Header>
         <WandIcon />
-        <S1>Contact me for some language magic</S1>
+        <S1>
+          <span>Contact me for some language magic</span>
+        </S1>
       </Header>
       <Icons>
         <IconRow>
           <EmailIcon />
-          <S4>sokolova.alexandra812@gmail.com</S4>
+          <S4>
+            <span>sokolova.alexandra812@gmail.com</span>
+          </S4>
         </IconRow>
         <IconRow>
           <LinkedInIcon />
