@@ -5,7 +5,7 @@ import { identity } from 'ramda';
 
 import { ScrollWrapper } from './styles';
 
-export const SCROLL_OVERLAP = 5;
+export const SCROLL_OVERLAP = 0.0001;
 
 export function windowIntervalScroll(windowIntervalOffset) {
   // Prevent testing errors

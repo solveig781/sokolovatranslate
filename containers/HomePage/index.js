@@ -1,3 +1,5 @@
+/* global window */
+
 import React from 'react';
 import styled from 'styled-components';
 
@@ -59,14 +61,47 @@ const NameFootline = styled(NameHeadline)`
   text-align: end;
 `;
 
+// scrollToPage(1) =>
+// page = 1
+
+// scrollToPage(2) =>
+// page = 2
+function scrollToPage(numberOfPages) {
+  window.scrollTo({
+    top: window.innerHeight * numberOfPages,
+    left: 0,
+    behavior: 'smooth',
+  });
+}
+
+function FUNCTION_NAME(PARAMETER, PARAMETER2) {
+  // CODE
+  // some_other_function()
+}
+
+function scrollToPortfolio() {
+  scrollToPage(1);
+}
+
+function scrollToContact() {
+  scrollToPage(2);
+}
+
+function openResume() {
+  window.open('Resume_Aleksandra Sokolova.pdf', '_blank');
+}
+function openFullExamples() {
+  window.open('full-examples');
+}
+
 function HomePage() {
   return (
     <StyledHomePage>
       <StyledButtonRow>
-        <Button>How I transalte</Button>
-        <Button>Full Examples</Button>
-        <Button>Contact Me</Button>
-        <ResumeButton>CV</ResumeButton>
+        <Button onClick={scrollToPortfolio}>How I transalte</Button>
+        <Button onClick={openFullExamples}>Full Examples</Button>
+        <Button onClick={scrollToContact}>Contact Me</Button>
+        <ResumeButton onClick={openResume}>CV</ResumeButton>
       </StyledButtonRow>
       <NameColumn>
         <NameHeadline>

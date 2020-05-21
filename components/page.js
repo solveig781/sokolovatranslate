@@ -19,7 +19,7 @@ const defaultBackground = createTheme('mode', {
 const PageWrapper = styled(Col)`
   width: 100%;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   height: calc(100vh + ${SCROLL_OVERLAP}px);
 
   background-color: ${defaultBackground};

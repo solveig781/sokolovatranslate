@@ -74,6 +74,10 @@ const CVButton = styled(Button)`
   color: black;
 `;
 
+function openResume() {
+  window.open('Resume_Aleksandra Sokolova.pdf', '_blank');
+}
+
 function Contact() {
   return (
     <PageWrapper>
@@ -96,7 +100,7 @@ function Contact() {
           <WhatsAppIcon />
         </IconRow>
       </Icons>
-      <CVButton>
+      <CVButton onClick={openResume}>
         <span>See my CV</span>
         <ArrowIcon />
       </CVButton>
