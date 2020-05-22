@@ -3,64 +3,84 @@ import styled from 'styled-components';
 
 import { Row, Col, S1, P5, P4, Button } from 'components';
 
-import ArrowIcon from './arrow';
-
 const PageStyle = styled(Col)`
   background: #7bb3e8;
   height: 100%;
 `;
 
+/*
 const Header = styled(Row)`
   align-items: center;
   margin-top: 60px;
   margin-left: 40px;
   justify-content: space-between;
-  border-bottom: 1px solid grey;
+ 
   color: white;
   font-family: Montserrat, sans-serif;
 `;
+*/
 
-const AllExamplesButton = styled(Button)`
+const PublicationButton = styled(Button)`
   align-items: center;
-
+  justify-content: center;
   width: 180px;
-  margin-right: 40px;
-  text-transform: none;
+  height: 60px;
   padding: 10px;
-  position: relative;
-  top: 16px;
-  background: #f4976c;
+  background: linear-gradient(
+      282.96deg,
+      #e05757 10.14%,
+      rgba(240, 139, 139, 0) 76.06%
+    ),
+    #f4976c;
   border-bottom: none;
-  color: black;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: Anonymous Pro, sans-serif;
+
+  position: absolute;
+  left: 86%;
+  z-index: 10;
 `;
 
-const Boxes = styled(Col)`
-  flex-grow: 1;
-  max-width: 350px;
-  margin-right: 40px;
+const Boxes = styled(Row)`
+  width: 100%;
+  justify-content: flex-end;
+
+  > ${Button} {
+      width: 180px;
+      max-height: 100px;
+      
+    }
+  }
+`;
+const Box = styled(Button)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: ;
 `;
 
+const HomeButton = styled(Button)`
+  border: 1px solid white;
+  margin-right: auto;
+`;
 const PreviewContainer = styled(Row)`
+  flex-grow: 1;
   background: #f9f2ec;
-  max-width: 900px;
   border-radius: 8px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 20px;
 `;
 
 const LanguageContainer = styled(Col)`
-  border-right: 0.8px solid grey;
-  border-left: 0.8px solid grey;
-
   flex-grow: 1;
   width: 50%;
+  position: relative;
 
   span {
     padding: 20px;
     text-align: center;
-    border-bottom: 1px solid black;
+    background: #dbdbdb;
+    border-radius: 8px;
   }
 
   p {
@@ -70,50 +90,45 @@ const LanguageContainer = styled(Col)`
     padding-left: 8px;
     padding-right: 8px;
   }
+  > ${P4} {
+    text-align: center;
+  }
 `;
 
-const Box = styled(Button)`
-  display: flex;
-  align-items: start;
-  justify-content: start;
-
-  border-bottom: none;
-  color: black;
-  margin: 20px;
-  padding: 10px;
-  max-height: 100px;
-`;
-
-const ContentContainer = styled(Row)`
+const ContentContainer = styled(Col)`
   flex-grow: 1;
-
-  justify-content: space-between;
-  margin: 40px;
-
+  justify-content: flex-start;
   font-family: 'Montserrat', sans-serif;
 `;
+
+function scrollToPage(numberOfPages) {
+  window.scrollTo({
+    top: window.innerHeight * numberOfPages,
+    left: 0,
+    behavior: 'smooth',
+  });
+}
+function scrollToHome() {
+  scrollToPage(0);
+}
 
 function WhyPickMe() {
   return (
     <PageStyle>
-      <Header>
-        <S1>How I Translate</S1>
-        <AllExamplesButton>
-          <span>all examples</span> <ArrowIcon />
-        </AllExamplesButton>
-      </Header>
       <ContentContainer>
         <Boxes>
-          <Box>TRAVEL/TOURISM</Box>
+          <HomeButton onClick={scrollToHome}>Home</HomeButton>
+          <Box>HOSPITALITY</Box>
           <Box>PR</Box>
           <Box>MARKETING</Box>
-          <Box>WEBSITES/WEB CONTENT</Box>
+          <Box>WEBSITES</Box>
           <Box>GENERAL</Box>
-          <Box>CIVIL DOCUMENTS</Box>
+          <Box>CIVIL</Box>
         </Boxes>
         <PreviewContainer>
           <LanguageContainer>
-            <span>Source - English</span>
+            <span>Source: English</span>
+            <PublicationButton>PUBLICATION</PublicationButton>
             <P4>5 Video Marketing Trends You Should Follow in 2019</P4>
             <P5>
               Got your 360-degree marketing video ready to go? What about that
@@ -141,8 +156,9 @@ function WhyPickMe() {
               marketing trends to watch for 2019.
             </P5>
           </LanguageContainer>
+
           <LanguageContainer>
-            <span>Target - Russian</span>
+            <span>Target: Russian</span>
             <P4>
               5 трендов видеомаркетинга, которым стоит следовать в 2019 году
             </P4>

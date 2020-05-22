@@ -16,7 +16,8 @@ const StyledButtonRow = styled(Row)`
   justify-content: flex-start;
 
   > ${Button} {
-    min-width: 180px;
+    width: 180px;
+    max-height: 100px;
   }
 `;
 
@@ -79,10 +80,6 @@ function FUNCTION_NAME(PARAMETER, PARAMETER2) {
   // some_other_function()
 }
 
-function scrollToPortfolio() {
-  scrollToPage(1);
-}
-
 function scrollToContact() {
   scrollToPage(2);
 }
@@ -90,18 +87,17 @@ function scrollToContact() {
 function openResume() {
   window.open('Resume_Aleksandra Sokolova.pdf', '_blank');
 }
-function openFullExamples() {
-  window.open('full-examples');
+function scrollToPortfolio() {
+  scrollToPage(1);
 }
 
 function HomePage() {
   return (
     <StyledHomePage>
       <StyledButtonRow>
-        <Button onClick={scrollToPortfolio}>How I transalte</Button>
-        <Button onClick={openFullExamples}>Full Examples</Button>
+        <Button onClick={scrollToPortfolio}>Portfolio</Button>
         <Button onClick={scrollToContact}>Contact Me</Button>
-        <ResumeButton onClick={openResume}>CV</ResumeButton>
+        <ResumeButton onClick={openResume}>MY CV</ResumeButton>
       </StyledButtonRow>
       <NameColumn>
         <NameHeadline>

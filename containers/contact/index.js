@@ -8,7 +8,21 @@ import EmailIcon from './email';
 import WandIcon from './wand';
 import FacebookIcon from './facebook';
 import WhatsAppIcon from './whatsapp';
-import ArrowIcon from './arrow';
+
+/* import * as React from 'react';
+import { IconButton, Colors } from 'react-native-paper';
+
+const MyComponent = () => (
+  <IconButton
+    icon="camera"
+    color={Colors.red500}
+    size={20}
+    onPress={() => console.log('Pressed')}
+  />
+);
+
+export default MyComponent;
+*/
 
 const PageWrapper = styled(Col)`
   background: linear-gradient(
@@ -24,13 +38,29 @@ const PageWrapper = styled(Col)`
   flex-grow: 1;
 `;
 
+const StyledButtonRow = styled(Row)`
+  width: 100%;
+  justify-content: flex-start;
+
+  > ${Button} {
+    width: 180px;
+    max-height: 100px;
+  }
+`;
+const HomeButton = styled(Button)`
+  min-width: 180px;
+  align-self: start;
+`;
+
+const PortfolioButton = styled(Button)``;
+
 const Header = styled(Row)`
   align-items: center;
   justify-content: center;
   position: relative;
   right: 5%;
-  margin: 80px;
-  margin-bottom: 50px;
+  margin: 40px;
+
   padding: 20px;
   width: 65%;
 
@@ -47,7 +77,7 @@ const Icons = styled(Col)`
   margin-bottom: 20px;
 `;
 
-const IconRow = styled(Row)`
+const ButtonRow = styled(Row)`
   margin: 20px;
   align-items: center;
   justify-content: space-between;
@@ -61,26 +91,52 @@ const IconRow = styled(Row)`
     position: relative;
     right: 9px;
   }
+  > ${Button} {
+    background:none;
+    padding:0;
+    border:none;
 `;
 
 const CVButton = styled(Button)`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding-left: 30px;
-  padding-right: 30px;
-
-  color: black;
+  margin-left: auto;
 `;
+
+function openLinkedIn() {
+  window.open('https://www.linkedin.com/in/aleksandra-sokolova-7aa70a177/');
+}
+
+function openFacebook() {
+  window.open('https://www.facebook.com/solveig781');
+}
 
 function openResume() {
   window.open('Resume_Aleksandra Sokolova.pdf', '_blank');
 }
 
+function scrollToPage(numberOfPages) {
+  window.scrollTo({
+    top: window.innerHeight * numberOfPages,
+    left: 0,
+    behavior: 'smooth',
+  });
+}
+function scrollToHome() {
+  scrollToPage(0);
+}
+function scrollToPortfolio() {
+  scrollToPage(1);
+}
+
 function Contact() {
   return (
     <PageWrapper>
+      <StyledButtonRow>
+        <HomeButton onClick={scrollToHome}>Home</HomeButton>
+        <PortfolioButton onClick={scrollToPortfolio}>Portfolio</PortfolioButton>
+        <CVButton onClick={openResume}>
+          <span>MY CV</span>
+        </CVButton>
+      </StyledButtonRow>
       <Header>
         <WandIcon />
         <S1>
@@ -88,22 +144,24 @@ function Contact() {
         </S1>
       </Header>
       <Icons>
-        <IconRow>
+        <ButtonRow>
           <EmailIcon />
           <S4>
             <span>sokolova.alexandra812@gmail.com</span>
           </S4>
-        </IconRow>
-        <IconRow>
-          <LinkedInIcon />
-          <FacebookIcon />
-          <WhatsAppIcon />
-        </IconRow>
+        </ButtonRow>
+        <ButtonRow>
+          <Button onClick={openLinkedIn}>
+            <LinkedInIcon />
+          </Button>
+          <Button onClick={openFacebook}>
+            <FacebookIcon />
+          </Button>
+          <Button>
+            <WhatsAppIcon />
+          </Button>
+        </ButtonRow>
       </Icons>
-      <CVButton onClick={openResume}>
-        <span>See my CV</span>
-        <ArrowIcon />
-      </CVButton>
     </PageWrapper>
   );
 }
