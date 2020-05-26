@@ -3,6 +3,6 @@ import { P5, P4 } from 'components';
 
 export default {
   publication: '',
-  english: <>Websites!!</>,
-  russian: <>Websites!!</>,
+  english: <>Coming soon!</>,
+  russian: <>Скоро здесь появится пример!</>,
 };

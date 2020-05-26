@@ -29,15 +29,24 @@ const Boxes = styled(Row)`
   > ${Button} {
       width: 180px;
       max-height: 100px;
-      
     }
   }
 `;
+
+function whiteWhenActive({ active }) {
+  if (active) {
+    return 'color: black; background: white;';
+  }
+
+  return '';
+}
+
 const Box = styled(Button)`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ;
+
+  ${whiteWhenActive}
 `;
 
 const HomeButton = styled(Button)`
@@ -70,14 +79,36 @@ function WhyPickMe() {
       <ContentContainer>
         <Boxes>
           <HomeButton onClick={scrollToHome}>Home</HomeButton>
-          <Box onClick={() => setSelectedExample('hospitality')}>
+          <Box
+            active={selectedExample === 'hospitality'}
+            onClick={() => setSelectedExample('hospitality')}
+          >
             HOSPITALITY
           </Box>
-          <Box onClick={() => setSelectedExample('pr')}>PR</Box>
-          <Box onClick={() => setSelectedExample('marketing')}>MARKETING</Box>
-          <Box onClick={() => setSelectedExample('websites')}>WEBSITES</Box>
-          <Box onClick={() => setSelectedExample('general')}>GENERAL</Box>
-          <Box onClick={() => setSelectedExample('civil')}>CIVIL</Box>
+          <Box
+            active={selectedExample === 'marketing'}
+            onClick={() => setSelectedExample('marketing')}
+          >
+            MARKETING
+          </Box>
+          <Box
+            active={selectedExample === 'general'}
+            onClick={() => setSelectedExample('general')}
+          >
+            GENERAL
+          </Box>
+          <Box
+            active={selectedExample === 'civil'}
+            onClick={() => setSelectedExample('civil')}
+          >
+            CIVIL
+          </Box>
+          <Box
+            active={selectedExample === 'websites'}
+            onClick={() => setSelectedExample('websites')}
+          >
+            WEBSITES
+          </Box>
         </Boxes>
         <Example selectedExample={selectedExample} />
       </ContentContainer>

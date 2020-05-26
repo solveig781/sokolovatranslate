@@ -2,17 +2,9 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import { P4, Col, Row, Button } from 'components';
+import { P4, P5, Col, Row, Button } from 'components';
 
-import prExample from './examples/pr';
-import marketingExample from './examples/marketing';
-import websitesExample from './examples/websites';
-
-const ALL_EXAMPLES = {
-  marketing: marketingExample,
-  pr: prExample,
-  websites: websitesExample,
-};
+import ALL_EXAMPLES from './examples';
 
 const LanguageContainer = styled(Col)`
   flex-grow: 1;
@@ -23,7 +15,6 @@ const LanguageContainer = styled(Col)`
     padding: 20px;
     text-align: center;
     background: #dbdbdb;
-    border-radius: 8px;
   }
 
   p {
@@ -36,12 +27,18 @@ const LanguageContainer = styled(Col)`
   > ${P4} {
     text-align: center;
   }
+  > ${P5} {
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: justify;
+    font-size: 14px;
+  }
 `;
 
 const PublicationButton = styled(Button)`
   align-items: center;
   justify-content: center;
-  width: 180px;
+  width: 130px;
   height: 60px;
   padding: 10px;
   background: linear-gradient(
@@ -55,7 +52,29 @@ const PublicationButton = styled(Button)`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   position: absolute;
-  left: 86%;
+  left: 79%;
+  z-index: 10;
+`;
+const FullTextButton = styled(Button)`
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 60px;
+  padding: 10px;
+
+  background: linear-gradient(
+      250.19deg,
+      rgba(240, 139, 139, 0) 23.39%,
+      #e05757 79.94%
+    ),
+    #f4976c;
+
+  border-bottom: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  position: absolute;
+  right: 79%;
   z-index: 10;
 `;
 
@@ -74,17 +93,24 @@ function Example({ selectedExample }) {
     <PreviewContainer>
       <LanguageContainer>
         <span>Source: English</span>
-        {selectedContent && (
+        {selectedContent && selectedContent.publication && (
           <PublicationButton
             onClick={() => window.open(selectedContent.publication)}
           >
             PUBLICATION
           </PublicationButton>
         )}
+
         {selectedContent && selectedContent.english}
       </LanguageContainer>
 
       <LanguageContainer>
+        {selectedContent && selectedContent.fulltext && (
+          <FullTextButton onClick={() => window.open(selectedContent.fulltext)}>
+            FULL TEXT
+          </FullTextButton>
+        )}
+
         <span>Target: Russian</span>
         {selectedContent && selectedContent.russian}
       </LanguageContainer>

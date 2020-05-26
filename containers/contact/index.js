@@ -105,12 +105,10 @@ const ButtonRow = styled(Row)`
 
       svg {
         position: relative;
-        bottom: 8px;
+        bottom: 4px;
       }
 
       path {
-        fill: white !important;
-        stroke: white !important;
       }
     }
   }
