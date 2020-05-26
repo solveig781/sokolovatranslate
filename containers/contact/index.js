@@ -1,9 +1,12 @@
+/* global window */
+
 import React from 'react';
 import styled from 'styled-components';
 
 import { Col, S1, Row, S4, Button } from 'components';
 
 import LinkedInIcon from './linkedin';
+
 import EmailIcon from './email';
 import WandIcon from './wand';
 import FacebookIcon from './facebook';
@@ -73,6 +76,7 @@ const Header = styled(Row)`
 const Icons = styled(Col)`
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 20px;
   margin-bottom: 20px;
 `;
@@ -83,18 +87,33 @@ const ButtonRow = styled(Row)`
   justify-content: space-between;
   width: 100%;
 
+  > ${S4} {
+    margin-left: 30px;
+  }
+
   svg {
     margin-left: 20px;
     margin-right: 20px;
   }
-  span {
-    position: relative;
-    right: 9px;
-  }
+
   > ${Button} {
-    background:none;
-    padding:0;
-    border:none;
+    padding: 0;
+    border: none;
+
+    &:hover {
+      background: none;
+
+      svg {
+        position: relative;
+        bottom: 8px;
+      }
+
+      path {
+        fill: white !important;
+        stroke: white !important;
+      }
+    }
+  }
 `;
 
 const CVButton = styled(Button)`
@@ -145,7 +164,6 @@ function Contact() {
       </Header>
       <Icons>
         <ButtonRow>
-          <EmailIcon />
           <S4>
             <span>sokolova.alexandra812@gmail.com</span>
           </S4>
