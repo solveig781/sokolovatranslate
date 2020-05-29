@@ -130,6 +130,10 @@ function openResume() {
   window.open('Resume_Aleksandra Sokolova.pdf', '_blank');
 }
 
+function openWhatsApp() {
+  window.open('https://wa.me/9779829171449');
+}
+
 function scrollToPage(numberOfPages) {
   window.scrollTo({
     top: window.innerHeight * numberOfPages,
@@ -173,7 +177,7 @@ function Contact() {
           <Button onClick={openFacebook}>
             <FacebookIcon />
           </Button>
-          <Button>
+          <Button onClick={openWhatsApp}>
             <WhatsAppIcon />
           </Button>
         </ButtonRow>

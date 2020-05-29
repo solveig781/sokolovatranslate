@@ -80,12 +80,6 @@ function WhyPickMe() {
         <Boxes>
           <HomeButton onClick={scrollToHome}>Home</HomeButton>
           <Box
-            active={selectedExample === 'hospitality'}
-            onClick={() => setSelectedExample('hospitality')}
-          >
-            HOSPITALITY
-          </Box>
-          <Box
             active={selectedExample === 'marketing'}
             onClick={() => setSelectedExample('marketing')}
           >
