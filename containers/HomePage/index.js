@@ -91,12 +91,12 @@ function scrollToPortfolio() {
   scrollToPage(1);
 }
 
-function HomePage({ setPage }) {
+function HomePage() {
   return (
     <StyledHomePage>
       <StyledButtonRow>
-        <Button onClick={() => setPage(1)}>Portfolio</Button>
-        <Button onClick={() => setPage(2)}>Contact Me</Button>
+        <Button onClick={scrollToPortfolio}>Portfolio</Button>
+        <Button onClick={scrollToContact}>Contact Me</Button>
         <ResumeButton onClick={openResume}>MY CV</ResumeButton>
       </StyledButtonRow>
       <NameColumn>

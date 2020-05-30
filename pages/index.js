@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import ReactPageScroller from 'react-page-scroller';
+import React from 'react';
 
 import { Page } from 'components';
 
@@ -8,21 +7,18 @@ import Contact from 'containers/contact';
 import Portfolio from 'containers/portfolio';
 
 function Index() {
-  const [scroller, setScroller] = useState(null);
-  const setPage = scroller && scroller.goToPage;
-
   return (
-    <ReactPageScroller ref={setScroller} animationTimer={500}>
+    <>
       <Page fullHeight>
-        <HomePage setPage={setPage} />
+        <HomePage />
       </Page>
       <Page fullHeight>
-        <Portfolio setPage={setPage} />
+        <Portfolio />
       </Page>
       <Page fullHeight>
-        <Contact setPage={setPage} />
+        <Contact />
       </Page>
-    </ReactPageScroller>
+    </>
   );
 }
 
