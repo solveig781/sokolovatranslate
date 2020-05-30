@@ -1,4 +1,4 @@
-import './keyboard';
+import './events';
 
 export { default as Page } from './page';
 export { default as Card } from './card';

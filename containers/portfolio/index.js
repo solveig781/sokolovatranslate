@@ -50,7 +50,7 @@ const Box = styled(Button)`
 `;
 
 const HomeButton = styled(Button)`
-  border: 1px solid white;
+  border-bottom: 1px solid white;
   margin-right: auto;
 `;
 

@@ -2,7 +2,11 @@
 
 import { windowIntervalScroll } from './scroll-direction';
 
-if (process.browser) {
+function addEvents() {
+  if (!process.browser) {
+    return;
+  }
+
   document.addEventListener('keydown', event => {
     switch (event.code) {
       case 'ArrowUp':
@@ -19,3 +23,5 @@ if (process.browser) {
     }
   });
 }
+
+addEvents();
