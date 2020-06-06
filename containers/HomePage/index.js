@@ -33,6 +33,7 @@ const StyledHomePage = styled(Col)`
 
 const NameColumn = styled(Col)`
   height: 100%;
+  justify-content: center;
 `;
 
 const NameHeadline = styled(Col)`
@@ -75,17 +76,12 @@ function scrollToPage(numberOfPages) {
   });
 }
 
-function FUNCTION_NAME(PARAMETER, PARAMETER2) {
-  // CODE
-  // some_other_function()
-}
-
 function scrollToContact() {
   scrollToPage(2);
 }
 
 function openResume() {
-  window.open('Resume_Aleksandra Sokolova.pdf', '_blank');
+  window.open('Sasha_Sokolova_Resume.pdf', '_blank');
 }
 function scrollToPortfolio() {
   scrollToPage(1);

@@ -127,7 +127,7 @@ function openFacebook() {
 }
 
 function openResume() {
-  window.open('Resume_Aleksandra Sokolova.pdf', '_blank');
+  window.open('Sasha_Sokolova_Resume.pdf', '_blank');
 }
 
 function openWhatsApp() {

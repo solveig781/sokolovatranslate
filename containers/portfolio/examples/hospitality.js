@@ -2,82 +2,60 @@ import React from 'react';
 import { P5, P4 } from 'components';
 
 export default {
-  publication:
-    'http://www.astanainterhotel.kz/ru/news/938-otel_mandarin_oriental_milan_znakomit_s_shedevrami_leonardo_da_vinchi/',
-  fulltext: '/Full_HospitalityPressRelease(MOMLN).pdf',
+  fulltext: '/Full_Hospitality_SashaSokolova.pdf',
   english: (
     <>
+      <P4>The famous Harry’s Bar sets up in Cannes</P4>
       <P5>
-        ADMIRE MASTERPIECES BY LEONARDO DA VINCI WITH MANDARIN ORIENTAL, MILAN
-      </P5>
-      <P5>
-        Hong Kong, 10 December 2018 – Mandarin Oriental, Milan has launched a
-        luxury accommodation package, The Genius of Leonardo da Vinci, which
-        provides guests with a unique and exclusive four-hour tour of Milan’s Da
-        Vinci masterpieces. Available until 31 December 2019, the package offers
-        additional itineraries for guests to choose from that take in Da Vinci’s
-        lesser-known works.
+        It’s official! From June 2020, Cannes will be the city hosting a new
+        Harry’s Bar (the oldest cocktail bar in Europe). Harry’s Bar in Cannes
+        will be installed in the very heart of the Port Canto, renovated and
+        modernized by David Lisnard, Mayor of Cannes, in the extension of the
+        overall embellishment of the Croisette.
       </P5>
 
       <P5>
-        A wealth of events will take place in Milan throughout 2019 to mark the
-        500th anniversary of Da Vinci’s death. Architect, artist, scientist,
-        inventor and engineer, Tuscan-born Leonardo left a hugely important
-        legacy in Milan during his twenty-year residency in the city.{' '}
+        The great-grandson of Harry MacElhone, founder of the famous cocktail
+        bar where the Bloody Mary and the Blue Lagoon were invented, chose
+        Cannes to perpetuate the unique atmosphere of the illustrious counter.
       </P5>
 
       <P5>
-        Guests booking The Genius of Leonardo da Vinci will enjoy luxurious
-        accommodation and breakfast, plus a private four-hour guided tour for
-        two people, featuring Leonardo’s must-see masterpieces, including The
-        Last Supper and the nearby Da Vinci Vineyard, which the Duke Of Milan
-        Ludovico Sforza gave to Leonardo as payment for painting that
-        masterpiece. Guests will also have an opportunity to admire the twelve
-        volume Codex Atlanticus, the largest collection of drawings, writings,
-        sketches and descriptions of Da Vinci’s extraordinary inventions. From 2
-        May 2019 the tour will include a visit to the Sala delle Asse in the
-        Sforza Castle, home to one of the first examples of illusionist
-        decoration.
+        “As an international village, Cannes has a lot in common with Harry’s
+        Bar. International when it comes to it’s fame, cosy when it comes to its
+        size, the city of Cannes is the best fit for settling a Cuban and sunny
+        version of Harry’s Bar. As the fourth generation of owner and as a
+        local, it is in the very heart of the Port Canto that I want to continue
+        the adventure of the oldest cocktail bar in Europe”.
       </P5>
+      <P5>- Franz-Arthur MacElhone</P5>
     </>
   ),
   russian: (
     <>
+      <P4>Знаменитый Harry’s Bar откроется в Каннах</P4>
       <P5>
-        ОТЕЛЬ MANDARIN ORIENTAL, МИЛАН ЗНАКОМИТ С ШЕДЕВРАМИ ЛЕОНАРДО ДА ВИНЧИ
-      </P5>
-
-      <P5>
-        Гонконг, 12 декабря 2018 года. Отель Mandarin Oriental, Милан запустил
-        специальное предложение The Genius of Leonardo da Vinci. Это целая
-        культурная программа с четырехчасовым туром по тем местам, где
-        представлены произведения Леонардо да Винчи. Помимо самых знаменитых
-        картин и фресок художника, гости смогут увидеть и менее известные его
-        работы. Предложение доступно для бронирования до 31 декабря 2019 года.
-      </P5>
-
-      <P5>
-        В течение 2019 года в Милане будет проходить серия различных
-        мероприятий, посвященных 500-летию со дня смерти Леонардо да Винчи.
-        Гений Возрождения родился в Тоскане, а в Милане прожил 20 лет. Все это
-        время он работал, занимался творчеством и оставил невероятное по
-        масштабам и значимости наследие в этом городе.{' '}
+        Жаркие новости! В июне 2020 года в Каннах откроется новый Harry's Bar
+        (Harry's Bar в Венеции — старейший коктейль-бар в Европе). Harry's Bar в
+        Каннах будет находиться в самом сердце Порт-Канто, добавив еще больше
+        шарма набережной Круазет. Мэр Канн Давид Лиснар (David Lisnard) поручил
+        отремонтировать и модернизировать здание к открытию.
       </P5>
       <P5>
-        В предложение The Genius of Leonardo da Vinci входит не только
-        проживание в отеле с завтраком, но и индивидуальный четырехчасовой тур
-        для двоих. Во время тура гости отеля увидят легендарную фреску «Тайная
-        Вечеря» и виноградник Леонардо да Винчи, расположенный неподалеку. Этот
-        виноградник великий гений получил в подарок от герцога Милана Лодовика
-        Сфорца после того, как закончил работу над фреской. Кроме этого,
-        программа тура предполагает посещение Амброзианской библиотеки, в
-        которой хранится манускрипт «Атлантический кодекс». Мансукрипт состоит
-        из 12 томов и представляет собой полнейшее собрание чертежей и рисунков
-        удивительных изобретений да Винчи. Начиная с 2 мая 2019 года маршрут
-        пополнит еще одно интересное место, «Дощатая зала» (Sala delle Asse) в
-        замке Сфорца. Роспись в этом помещении – один из первых примеров
-        применения эффекта иллюзии в декоре.{' '}
+        Гарри МакЭлон (Harry MacElhone) основал первый Harry's Bar в Венеции.
+        Здесь были изобретены коктейли Кровавая Мэри и Голубая Лагуна. Теперь
+        Франц-Артур (Franz-Arthur MacElhone), правнук Гарри МакЭлона, продолжит
+        семейное дело, открыв новый, но такой же знакомый бар в Каннах.
       </P5>
+      <P5>
+        “Город Канны и Harry’s Bar имеют много общего. Город, так же как и бар,
+        принимает гостей со всего мира, оставаясь небольшим и уютным. Кроме
+        того, Канны — самое подходящее место для солнечного бара в кубинском
+        стиле. Как владелец в четвертом поколении и как местный житель, я вижу
+        продолжение истории старейшего коктейль-бара Европы именно здесь, в
+        самом сердце Порт-Канто”.
+      </P5>
+      <P5>- Франц-Артур МакЭлон</P5>
     </>
   ),
 };

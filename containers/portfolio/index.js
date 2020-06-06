@@ -46,7 +46,7 @@ const Box = styled(Button)`
   align-items: center;
   justify-content: center;
 
-  ${whiteWhenActive}
+  ${whiteWhenActive};
 `;
 
 const HomeButton = styled(Button)`
@@ -86,6 +86,12 @@ function WhyPickMe() {
             MARKETING
           </Box>
           <Box
+            active={selectedExample === 'hospitality'}
+            onClick={() => setSelectedExample('hospitality')}
+          >
+            HOSPITALITY
+          </Box>
+          <Box
             active={selectedExample === 'general'}
             onClick={() => setSelectedExample('general')}
           >
@@ -96,12 +102,6 @@ function WhyPickMe() {
             onClick={() => setSelectedExample('civil')}
           >
             CIVIL
-          </Box>
-          <Box
-            active={selectedExample === 'websites'}
-            onClick={() => setSelectedExample('websites')}
-          >
-            WEBSITES
           </Box>
         </Boxes>
         <Example selectedExample={selectedExample} />

@@ -105,15 +105,29 @@ function Example({ selectedExample }) {
             FULL TEXT
           </HeaderButtonReversed>
         )}
+
+        {selectedContent && selectedContent.original && (
+          <HeaderButton onClick={() => window.open(selectedContent.original)}>
+            ORIGINAL
+          </HeaderButton>
+        )}
+
+        {selectedContent && selectedContent.translated && (
+          <HeaderButtonReversed
+            onClick={() => window.open(selectedContent.translated)}
+          >
+            Translated
+          </HeaderButtonReversed>
+        )}
       </HeaderButtonContainer>
       <LanguageContainer>
-        <span>Source: English</span>
+        <span>Source: {selectedContent.labelSource || 'English'}</span>
 
         {selectedContent && selectedContent.english}
       </LanguageContainer>
 
       <LanguageContainer>
-        <span>Target: Russian</span>
+        <span>Target: {selectedContent.labelTarget || 'Russian'}</span>
         {selectedContent && selectedContent.russian}
       </LanguageContainer>
     </PreviewContainer>
