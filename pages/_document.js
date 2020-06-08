@@ -67,7 +67,7 @@ export default class DefaultDocument extends Document {
 
   render() {
     const pageTitle = 'Sasha Sokolova';
-    const pageDescription = 'Homepage and portfolio of Sasha Sokolova.';
+    const pageDescription = 'Sasha Sokolova, EN-RU Translator';
 
     const { hostName } = this.props;
 
