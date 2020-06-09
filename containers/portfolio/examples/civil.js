@@ -10,7 +10,7 @@ export default {
     <>
       <P4>My Bachelor's Diploma</P4>
       <P5>
-        I translate all types of civil documentation: birth, marriage,
+        I translate all types of civil documentation: birth/marriage
         certificates, reports, apostilles, high education diplomas, etc.
       </P5>
       <P5>
