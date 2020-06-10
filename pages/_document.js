@@ -19,7 +19,7 @@ function googleAnalytics() {
   const __html = `window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date()); gtag('config', '');
-  gtag('config', 'GA_MEASUREMENT_ID', { 'app_name': 'tavurth.com' });`;
+  gtag('config', 'UA-169038522-1', { 'app_name': 'sokolovatranslate.now.sh' });`;
 
   return { __html };
 }
