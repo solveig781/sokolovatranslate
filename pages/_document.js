@@ -74,6 +74,12 @@ export default class DefaultDocument extends Document {
     return (
       <html lang="en">
         <Head>
+          <meta property="og:url" content={hostName} />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content={pageTitle} />
+          <meta property="og:description" content={pageDescription} />
+          <meta property="og:image" content={`${hostName}thumbnail.png`} />
+          <meta name="twitter:card" content="summary_large_image" />
           <meta charSet="utf-8" />
           <meta name="robots" content="index, follow" />
           <meta name="description" content="" />
@@ -81,12 +87,6 @@ export default class DefaultDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          <meta property="og:url" content={hostName} />
-          <meta property="og:type" content="website" />
-          <meta property="og:title" content={pageTitle} />
-          <meta property="og:description" content={pageDescription} />
-          <meta property="og:image" content={`${hostName}thumbnail.png?1`} />
-          <meta name="twitter:card" content="summary_large_image" />
           {/* For humans */}
           <link type="text/plain" rel="author" href="/humans.txt" />
           {/* Google structured documents */}
