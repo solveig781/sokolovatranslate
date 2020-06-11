@@ -119,7 +119,7 @@ const CVButton = styled(Button)`
 `;
 
 function openLinkedIn() {
-  window.open('https://www.linkedin.com/in/aleksandra-sokolova-7aa70a177/');
+  window.open('https://www.linkedin.com/in/sasha-sokolova-7aa70a177/');
 }
 
 function openFacebook() {
