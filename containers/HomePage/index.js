@@ -97,7 +97,7 @@ function HomePage() {
       </StyledButtonRow>
       <NameColumn>
         <NameHeadline>
-          <H1>ENGLISH - RUSSIAN TRANSLATION</H1>
+          <H1>ENGLISH — RUSSIAN TRANSLATION</H1>
           <S1>Sasha Sokolova</S1>
         </NameHeadline>
 

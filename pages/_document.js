@@ -78,7 +78,7 @@ export default class DefaultDocument extends Document {
           <meta property="og:type" content="website" />
           <meta property="og:title" content={pageTitle} />
           <meta property="og:description" content={pageDescription} />
-          <meta property="og:image" content={`${hostName}thumbnail.jpg`} />
+          <meta property="og:image" content={`${hostName}thumbnail.png`} />
           <meta name="twitter:card" content="summary_large_image" />
           <meta charSet="utf-8" />
           <meta name="robots" content="index, follow" />
