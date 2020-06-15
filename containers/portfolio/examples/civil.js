@@ -5,18 +5,18 @@ export default {
   labelSource: 'Russian',
   labelTarget: 'English',
   original: '/SashaSokolova_Diploma_Original.pdf',
-  translated: '/Bachelor Diploma_Aleksandra Sokolova.pdf',
+  translated: '/Bachelor_Diploma_AleksandraSokolova.pdf',
   english: (
     <>
       <P4>My Bachelor's Diploma</P4>
       <P5>
         I translate all types of civil documentation: birth/marriage
-        certificates, reports, apostilles, high education diplomas, etc.
+        certificates, reports, apostilles, higher education diplomas, etc.
       </P5>
       <P5>
-        However, any demonstration of suh work would be a confidentiality
-        violation of the clients, I’m using my high education diploma, which I
-        translated from Russian to English myself as an example of such work.
+        However, any demonstration of such work would be a confidentiality
+        violation. I’m using my higher education diploma, which I translated
+        from Russian to English myself as an example of such work.
       </P5>
     </>
   ),
