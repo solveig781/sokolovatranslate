@@ -81,7 +81,7 @@ function scrollToContact() {
 }
 
 function openResume() {
-  window.open('Sasha_Sokolova_Resume.pdf', '_blank');
+  window.open('Resume_Sasha_Sokolova.pdf', '_blank');
 }
 function scrollToPortfolio() {
   scrollToPage(1);
