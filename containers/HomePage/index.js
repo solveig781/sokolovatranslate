@@ -9,20 +9,40 @@ import LighteningIcon from './lightening';
 
 const StyledLightening = styled(Row)`
   justify-content: center;
+  @media (max-width: 700px) {
+    width: 300px;
+    align-self: center;
+  }
 `;
 
 const StyledButtonRow = styled(Row)`
   width: 100%;
   justify-content: flex-start;
 
+  @media (max-width: 700px) {
+    justify-content: space-between;
+  }
+
   > ${Button} {
     width: 180px;
     max-height: 100px;
+
+    @media (max-width: 700px) {
+      padding: 20px;
+      width: 120px;
+      height: 120px;
+      font-size: 12px;
+      text-align: center;
+    }
   }
 `;
 
 const ResumeButton = styled(Button)`
   margin-left: auto;
+  @media (max-width: 700px) {
+    max-width: 120px;
+    margin: 0px;
+  }
 `;
 
 const StyledHomePage = styled(Col)`
@@ -43,17 +63,32 @@ const NameHeadline = styled(Col)`
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 42px;
-    font-family: Comfortaa;
+    font-family: Comfortaa, sans-serif;
     font-size: 35px;
     line-height: 33px;
     letter-spacing: 0.1em;
+
+    @media (max-width: 700px) {
+      font-size: 20px;
+    }
   }
+
   ${S1} {
     color: #eef5d8;
     font-size: 30px;
     font-family: Montserrat, sans-serif;
     margin-right: 40px;
     margin-left: 40px;
+
+    @media (max-width: 700px) {
+      font-size: 17px;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    margin-top: 10px;
   }
 `;
 
@@ -61,6 +96,9 @@ const NameHeadline = styled(Col)`
 const NameFootline = styled(NameHeadline)`
   align-self: flex-end;
   text-align: end;
+  @media (max-width: 700px) {
+    margin-top: 0px;
+  }
 `;
 
 // scrollToPage(1) =>

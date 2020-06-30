@@ -45,14 +45,33 @@ const StyledButtonRow = styled(Row)`
   width: 100%;
   justify-content: flex-start;
 
+  @media (max-width: 700px) {
+    justify-content: space-between;
+  }
+
   > ${Button} {
     width: 180px;
     max-height: 100px;
+
+    @media (max-width: 700px) {
+      padding: 20px;
+      width: 120px;
+      height: 120px;
+      font-size: 12px;
+      text-align: center;
+    }
   }
 `;
 const HomeButton = styled(Button)`
-  min-width: 180px;
+  max-width: 180px;
   align-self: start;
+
+  @media (max-width: 700px) {
+    padding: 20px;
+    width: 120px;
+    height: 120px;
+    font-size: 12px;
+  }
 `;
 
 const PortfolioButton = styled(Button)``;
@@ -66,10 +85,37 @@ const Header = styled(Row)`
 
   padding: 20px;
   width: 65%;
+  text-align: center;
+
+  @media (max-width: 700px) {
+    width: 80%;
+    justify-content: space-between;
+    margin: 50px;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 0;
+  }
 
   svg {
     margin-right: 80px;
     margin-bottom: 50px;
+
+    @media (max-width: 700px) {
+      margin: 0;
+      margin-right: 10px;
+      margin-bottom: 50px;
+      min-width: 40px;
+    }
+  }
+
+  > ${S1} {
+    @media (max-width: 700px) {
+      font-size: 20px;
+      margin: 20px;
+      margin-left: 0px;
+      margin-right: 0;
+      padding-right: 0;
+    }
   }
 `;
 
@@ -79,6 +125,10 @@ const Icons = styled(Col)`
   justify-content: center;
   padding: 20px;
   margin-bottom: 20px;
+
+  @media (max-width: 700px) {
+    margin-top: 50px;
+  }
 `;
 
 const ButtonRow = styled(Row)`
@@ -87,8 +137,16 @@ const ButtonRow = styled(Row)`
   justify-content: space-between;
   width: 100%;
 
+  @media (max-width: 700px) {
+    width: 80%;
+  }
+
   > ${S4} {
     margin-left: 30px;
+
+    @media (max-width: 700px) {
+      margin: 0;
+    }
   }
 
   svg {
@@ -116,6 +174,14 @@ const ButtonRow = styled(Row)`
 
 const CVButton = styled(Button)`
   margin-left: auto;
+
+  @media (max-width: 700px) {
+    padding: 20px;
+    width: 120px;
+    height: 120px;
+    font-size: 12px;
+    margin: 0px;
+  }
 `;
 
 function openLinkedIn() {
@@ -160,15 +226,11 @@ function Contact() {
       </StyledButtonRow>
       <Header>
         <WandIcon />
-        <S1>
-          <span>Contact me for some language magic</span>
-        </S1>
+        <S1>Contact me for some language magic</S1>
       </Header>
       <Icons>
         <ButtonRow>
-          <S4>
-            <span>sokolova.alexandra812@gmail.com</span>
-          </S4>
+          <S4>sokolova.alexandra812@gmail.com</S4>
         </ButtonRow>
         <ButtonRow>
           <Button onClick={openLinkedIn}>
