@@ -27,8 +27,12 @@ const Boxes = styled(Row)`
   justify-content: flex-end;
 
   > ${Button} {
-      width: 180px;
-      max-height: 100px;
+    width: 180px;
+    max-height: 100px;
+
+    @media (max-width: 700px) {
+      width: 100%;
+      max-height: 40px;
     }
   }
 `;

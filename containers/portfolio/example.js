@@ -33,6 +33,9 @@ const LanguageContainer = styled(Col)`
     text-align: justify;
     font-size: 14px;
   }
+  @media (max-width: 700px) {
+    background: none;
+  }
 `;
 
 const HeaderButtonContainer = styled(Row)`
@@ -66,6 +69,15 @@ const HeaderButton = styled(Button)`
   border-bottom: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 700px) {
+    width: 90px;
+    height: 40px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 10px;
+  }
 `;
 
 const HeaderButtonReversed = styled(HeaderButton)`
@@ -75,6 +87,13 @@ const HeaderButtonReversed = styled(HeaderButton)`
       #e05757 79.94%
     ),
     #f4976c;
+  @media (max-width: 700px) {
+    width: 90px;
+    height: 40px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 `;
 
 const PreviewContainer = styled(Row)`
@@ -83,6 +102,10 @@ const PreviewContainer = styled(Row)`
   border-radius: 8px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 20px;
+
+  @media (max-width: 700px) {
+    background: none;
+  }
 `;
 
 function Example({ selectedExample }) {
