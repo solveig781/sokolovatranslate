@@ -1,117 +1,50 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+/* global window */
 
-import { Row, Col, Button } from 'components';
+import React, { useEffect, useState } from 'react';
 
-import Example from './example';
+import MobilePortfolio from './mobile';
+import DesktopPortfolio from './desktop';
 
-const PageStyle = styled(Col)`
-  background: #7bb3e8;
-  height: 100%;
-`;
-
-/*
-const Header = styled(Row)`
-  align-items: center;
-  margin-top: 60px;
-  margin-left: 40px;
-  justify-content: space-between;
- 
-  color: white;
-  font-family: Montserrat, sans-serif;
-`;
-*/
-
-const Boxes = styled(Row)`
-  width: 100%;
-  justify-content: flex-end;
-
-  > ${Button} {
-    width: 180px;
-    max-height: 100px;
-
-    @media (max-width: 700px) {
-      width: 100%;
-      max-height: 40px;
-    }
-  }
-`;
-
-function whiteWhenActive({ active }) {
-  if (active) {
-    return 'color: black; background: white;';
+function getClientType() {
+  // we should return the string:
+  // 'mobile' when user has mobile device
+  // 'desktop' when screen is larger
+  if (process.browser === false) {
+    return 'desktop';
   }
 
-  return '';
+  if (window.innerWidth < 700) {
+    return 'mobile';
+  }
+
+  return 'desktop';
 }
 
-const Box = styled(Button)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+function Portfolio() {
+  // We need to keep the users size in state
+  // which can be updated when the user changes their desktop size
+  // We'll listen for resize events below and update this variable
+  const [clientType, setClientType] = useState(getClientType());
 
-  ${whiteWhenActive};
-`;
+  // Listen for resize events and update the client type (mobile or desktop)
+  // when the browsers window size reaches our breakpoint
+  useEffect(() => {
+    if (process.browser === false) return false;
 
-const HomeButton = styled(Button)`
-  border-bottom: 1px solid white;
-  margin-right: auto;
-`;
+    // listen for resize events and handle the state change
+    const listener = window.addEventListener('resize', () =>
+      setClientType(getClientType()),
+    );
 
-const ContentContainer = styled(Col)`
-  flex-grow: 1;
-  justify-content: flex-start;
-  font-family: 'Montserrat', sans-serif;
-`;
-
-function scrollToPage(numberOfPages) {
-  window.scrollTo({
-    top: window.innerHeight * numberOfPages,
-    left: 0,
-    behavior: 'smooth',
+    // Cleanup the listener when this component gets unmounted
+    return () => window.removeEventListener('resize', listener);
   });
-}
-function scrollToHome() {
-  scrollToPage(0);
-}
 
-function WhyPickMe() {
-  const [selectedExample, setSelectedExample] = useState('marketing');
+  if (clientType === 'mobile') {
+    return <MobilePortfolio />;
+  }
 
-  return (
-    <PageStyle>
-      <ContentContainer>
-        <Boxes>
-          <HomeButton onClick={scrollToHome}>Home</HomeButton>
-          <Box
-            active={selectedExample === 'marketing'}
-            onClick={() => setSelectedExample('marketing')}
-          >
-            MARKETING
-          </Box>
-          <Box
-            active={selectedExample === 'hospitality'}
-            onClick={() => setSelectedExample('hospitality')}
-          >
-            HOSPITALITY
-          </Box>
-          <Box
-            active={selectedExample === 'general'}
-            onClick={() => setSelectedExample('general')}
-          >
-            GENERAL
-          </Box>
-          <Box
-            active={selectedExample === 'civil'}
-            onClick={() => setSelectedExample('civil')}
-          >
-            CIVIL
-          </Box>
-        </Boxes>
-        <Example selectedExample={selectedExample} />
-      </ContentContainer>
-    </PageStyle>
-  );
+  return <DesktopPortfolio />;
 }
 
-export default WhyPickMe;
+export default Portfolio;
