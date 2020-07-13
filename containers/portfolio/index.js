@@ -25,6 +25,7 @@ function addMediaSize({ maxWidth, minWidth }) {
 }
 
 const MediaSize = styled.div`
+  flex-grow: 1;
   ${addMediaSize}
 `;
 
