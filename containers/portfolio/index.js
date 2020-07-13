@@ -1,50 +1,44 @@
 /* global window */
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import styled from 'styled-components';
 
 import MobilePortfolio from './mobile';
 import DesktopPortfolio from './desktop';
 
-function getClientType() {
-  // we should return the string:
-  // 'mobile' when user has mobile device
-  // 'desktop' when screen is larger
-  if (process.browser === false) {
-    return 'desktop';
+function addMediaSize({ maxWidth, minWidth }) {
+  let toReturn = '';
+
+  if (maxWidth) {
+    // if we specified a max width
+    // we should hide this component when the width is larger
+    toReturn += `@media (min-width: ${maxWidth + 1}px) { display: none; }`;
   }
 
-  if (window.innerWidth < 700) {
-    return 'mobile';
+  if (minWidth) {
+    // if we specified a min width
+    // we should hide this component when the width is smaller
+    toReturn += `@media (max-width: ${minWidth}px) { display: none; }`;
   }
 
-  return 'desktop';
+  return toReturn;
 }
 
+const MediaSize = styled.div`
+  ${addMediaSize}
+`;
+
 function Portfolio() {
-  // We need to keep the users size in state
-  // which can be updated when the user changes their desktop size
-  // We'll listen for resize events below and update this variable
-  const [clientType, setClientType] = useState(getClientType());
-
-  // Listen for resize events and update the client type (mobile or desktop)
-  // when the browsers window size reaches our breakpoint
-  useEffect(() => {
-    if (process.browser === false) return false;
-
-    // listen for resize events and handle the state change
-    const listener = window.addEventListener('resize', () =>
-      setClientType(getClientType()),
-    );
-
-    // Cleanup the listener when this component gets unmounted
-    return () => window.removeEventListener('resize', listener);
-  });
-
-  if (clientType === 'mobile') {
-    return <MobilePortfolio />;
-  }
-
-  return <DesktopPortfolio />;
+  return (
+    <>
+      <MediaSize minWidth={700}>
+        <DesktopPortfolio />
+      </MediaSize>
+      <MediaSize maxWidth={700}>
+        <MobilePortfolio />
+      </MediaSize>
+    </>
+  );
 }
 
 export default Portfolio;

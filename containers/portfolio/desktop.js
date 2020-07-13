@@ -79,7 +79,7 @@ function DesktopPortfolio() {
   const [selectedExample, setSelectedExample] = useState('marketing');
 
   return (
-    <PageStyle>
+    <PageStyle key="desktop-portfolio">
       <ContentContainer>
         <Boxes>
           <HomeButton onClick={scrollToHome}>Home</HomeButton>

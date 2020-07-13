@@ -1,28 +1,32 @@
 import React from 'react';
-import { HeaderButton, HeaderButtonReversed } from './header-buttons';
 import styled from 'styled-components';
+
 import { Row, Col, S4, P4, P5, Button } from 'components';
+import { HeaderButton, HeaderButtonReversed } from './header-buttons';
 import WhiteArrow from './whiteArrow';
 import BlackArrowRight from './blackArrowRight';
 import BlackArrowLeft from './blackArrowLeft';
+
 const PageStyle = styled(Col)`
   background: #7bb3e8;
   height: 100%;
 `;
-const TranslationTypeHeder = styled(Row)`
+
+const UnpaddedButton = styled(Button)`
+  padding: 0;
+  margin-right: 10px;
+  margin-left: 10px;
+  max-width: 20px;
+  max-height: 60px;
+  border-bottom: none;
+`;
+
+const TranslationTypeHeader = styled(Row)`
   width: 100%;
-  height: 40px;
+  height: 45px;
   background: white;
   justify-content: space-between;
   align-items: center;
-
-  > ${Button} {
-    width: 20px;
-    max-height: 40px;
-    border-bottom: none;
-    padding:0;  
-    margin-right: 10px;
-    margin-left: 10px;
 `;
 
 const HeaderButtonContainer = styled(Row)`
@@ -66,7 +70,7 @@ const SourceConteiner = styled(Col)`
   }
 
   > ${P4} {
-    font-size: 14px;
+    font-size: 15px;
     align-self: center;
     text-align: center;
 
@@ -76,6 +80,7 @@ const SourceConteiner = styled(Col)`
   }
 
   > ${P5} {
+    font-size: 13px;
     @media (max-width: 355px) {
       margin-top: 10px;
       margin-bottom: 10px;
@@ -94,8 +99,9 @@ const TargetConteiner = styled(Col)`
     font-weight: bold;
     align-self: center;
   }
+
   > ${P4} {
-    font-size: 14px;
+    font-size: 15px;
     align-self: center;
     text-align: center;
 
@@ -103,7 +109,9 @@ const TargetConteiner = styled(Col)`
       margin: 10px;
     }
   }
+
   > ${P5} {
+    font-size: 13px;
     @media (max-width: 355px) {
       margin-top: 10px;
       margin-bottom: 10px;
@@ -114,56 +122,55 @@ const TargetConteiner = styled(Col)`
 function MobilePortfolio() {
   return (
     <PageStyle>
-      <div>
-        <TranslationTypeHeder>
-          <Button>
-            <BlackArrowLeft />
-          </Button>
-          TRANSLATION TYPE
-          <Button>
-            <BlackArrowRight />
-          </Button>
-        </TranslationTypeHeder>
-        <HeaderButtonContainer>
-          <HeaderButton>PUBLICATION</HeaderButton>
-          <HeaderButtonReversed>FULL TEXT</HeaderButtonReversed>
-        </HeaderButtonContainer>
-        <ContentContainer>
-          <SourceConteiner>
-            <S4>SOURCE</S4>
-            <WhiteArrow />
-            <P4>5 Video Marketing Trends You Should Follow in 2019</P4>
-            <P5>
-              Got your 360-degree marketing video ready to go? What about that
-              virtual reality how-to? Time to get ready for the future.
-            </P5>
-            <P5>
-              Many consumers devote (what seems like) 24/7 of their time to
-              holding a mobile device in one hand and dealing, with the other,
-              with a million different companies vying for their attention on
-              the web.
-            </P5>
-          </SourceConteiner>
-          <TargetConteiner>
-            <S4>TARGET</S4>
-            <WhiteArrow />
-            <P4>
-              5 трендов видеомаркетинга, которым стоит следовать в 2019 году
-            </P4>
-            <P5>
-              Уже смонтировали свое видео в 360 градусов? А обучающий ролик в
-              виртуальной реальности? Пора готовиться к будущему!
-            </P5>
-            <P5>
-              Многие люди проводят 24 часа в сутки 7 дней в неделю с телефоном в
-              руках. И в это время (то есть, всегда) компании со всего мира
-              борются за внимание пользователей. Если ваша компания тоже
-              пытается пробиться через клаттер и выделиться на общем фоне, –
-              поздравляем, вам не обойтись без видеомаркетинга!
-            </P5>
-          </TargetConteiner>
-        </ContentContainer>
-      </div>
+      <TranslationTypeHeader>
+        <UnpaddedButton>
+          <BlackArrowLeft />
+        </UnpaddedButton>
+        TRANSLATION TYPE
+        <UnpaddedButton>
+          <BlackArrowRight />
+        </UnpaddedButton>
+      </TranslationTypeHeader>
+
+      <HeaderButtonContainer>
+        <HeaderButton>PUBLICATION</HeaderButton>
+        <HeaderButtonReversed>FULL TEXT</HeaderButtonReversed>
+      </HeaderButtonContainer>
+      <ContentContainer>
+        <SourceConteiner>
+          <S4>SOURCE</S4>
+          <WhiteArrow />
+          <P4>5 Video Marketing Trends You Should Follow in 2019</P4>
+          <P5>
+            Got your 360-degree marketing video ready to go? What about that
+            virtual reality how-to? Time to get ready for the future.
+          </P5>
+          <P5>
+            Many consumers devote (what seems like) 24/7 of their time to
+            holding a mobile device in one hand and dealing, with the other,
+            with a million different companies vying for their attention on the
+            web.
+          </P5>
+        </SourceConteiner>
+        <TargetConteiner>
+          <S4>TARGET</S4>
+          <WhiteArrow />
+          <P4>
+            5 трендов видеомаркетинга, которым стоит следовать в 2019 году
+          </P4>
+          <P5>
+            Уже смонтировали свое видео в 360 градусов? А обучающий ролик в
+            виртуальной реальности? Пора готовиться к будущему!
+          </P5>
+          <P5>
+            Многие люди проводят 24 часа в сутки 7 дней в неделю с телефоном в
+            руках. И в это время (то есть, всегда) компании со всего мира
+            борются за внимание пользователей. Если ваша компания тоже пытается
+            пробиться через клаттер и выделиться на общем фоне, – поздравляем,
+            вам не обойтись без видеомаркетинга!
+          </P5>
+        </TargetConteiner>
+      </ContentContainer>
     </PageStyle>
   );
 }
