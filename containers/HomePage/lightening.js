@@ -3,29 +3,30 @@ import React from 'react';
 export default function Lightening() {
   return (
     <svg
-      width="370"
-      height="146"
-      viewBox="0 0 370 146"
+      width="930"
+      height="542"
+      viewBox="0 0 930 542"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g opacity="0.35" filter="url(#filter0_d)">
+      <g opacity="0.2" filter="url(#filter0_d)">
         <path
-          d="M172.729 63.4608L4.00003 45.1108L201.508 100.802L198.077 74.2549L365.036 92.5091L169.298 36.9135L172.729 63.4608Z"
-          fill="#A2A2A2"
+          d="M442.32 232.871L63.2247 5.93593e-06L474.69 419.419L491.686 302.35L866.714 533.194L459.315 115.802L442.32 232.871Z"
+          fill="#B8B6B4"
         />
         <path
-          d="M172.729 63.4608L4.00003 45.1108L201.508 100.802L198.077 74.2549L365.036 92.5091L169.298 36.9135L172.729 63.4608Z"
+          d="M442.32 232.871L63.2247 5.93593e-06L474.69 419.419L491.686 302.35L866.714 533.194L459.315 115.802L442.32 232.871Z"
           fill="url(#paint0_linear)"
+          fill-opacity="0.6"
         />
       </g>
       <defs>
         <filter
           id="filter0_d"
-          x="6.10352e-05"
-          y="0"
-          width="369.036"
-          height="145.62"
+          x="0"
+          y="7.62939e-06"
+          width="929.939"
+          height="541.194"
           filterUnits="userSpaceOnUse"
           color-interpolation-filters="sRGB"
         >
@@ -55,14 +56,14 @@ export default function Lightening() {
         </filter>
         <linearGradient
           id="paint0_linear"
-          x1="117.245"
-          y1="68.6778"
-          x2="359.444"
-          y2="82.5595"
+          x1="307.042"
+          y1="204.583"
+          x2="896.268"
+          y2="354.476"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stop-color="#F8F8F8" />
+          <stop offset="0.661458" stop-color="white" stop-opacity="0" />
         </linearGradient>
       </defs>
     </svg>

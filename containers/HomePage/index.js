@@ -7,11 +7,25 @@ import { Col, Row, H1, S1, Button } from 'components';
 
 import LighteningIcon from './lightening';
 
-const StyledLightening = styled(Row)`
-  justify-content: center;
+const StyledLightening = styled.div`
+  position: absolute;
+  left: 35%;
+  bottom: -15%;
+
   @media (max-width: 700px) {
-    width: 300px;
-    align-self: center;
+    left: 10%;
+    bottom: -20%;
+  }
+
+  @media (max-width: 520px) {
+    transform: scale(0.8, 0.8);
+    left: -35%;
+    bottom: 2%;
+  }
+
+  @media (max-width: 360px) {
+    transform: scale(0.6, 0.6);
+    left: -80%;
   }
 `;
 
@@ -22,7 +36,9 @@ const StyledButtonRow = styled(Row)`
   @media (max-width: 700px) {
     justify-content: space-between;
   }
-
+  @media (max-width: 430px) {
+    border-bottom: 1px solid #cbffe1;
+  }
   > ${Button} {
     width: 180px;
     max-height: 100px;
@@ -33,6 +49,10 @@ const StyledButtonRow = styled(Row)`
       height: 120px;
       font-size: 12px;
       text-align: center;
+    }
+
+    @media (max-width: 430px) {
+      border-bottom: none;
     }
   }
 `;
@@ -53,12 +73,11 @@ const StyledHomePage = styled(Col)`
 
 const NameColumn = styled(Col)`
   height: 100%;
-  justify-content: center;
+  justify-content: space-between;
 `;
 
 const NameHeadline = styled(Col)`
   margin: 40px;
-
   ${H1} {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -134,15 +153,15 @@ function HomePage() {
         <Button onClick={scrollToContact}>Contact Me</Button>
         <ResumeButton onClick={openResume}>MY CV</ResumeButton>
       </StyledButtonRow>
+      <StyledLightening>
+        <LighteningIcon />
+      </StyledLightening>
+
       <NameColumn>
         <NameHeadline>
           <H1>ENGLISH — RUSSIAN TRANSLATION</H1>
           <S1>Sasha Sokolova</S1>
         </NameHeadline>
-
-        <StyledLightening>
-          <LighteningIcon />
-        </StyledLightening>
         <NameFootline>
           <S1>Саша Соколова</S1>
           <H1>ПЕРЕВОД С АНГЛИЙСКОГО НА РУССКИЙ</H1>
