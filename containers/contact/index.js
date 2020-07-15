@@ -49,6 +49,10 @@ const StyledButtonRow = styled(Row)`
     justify-content: space-between;
   }
 
+  @media (max-width: 430px) {
+    border-bottom: 1px solid #cbffe1;
+  }
+
   > ${Button} {
     width: 180px;
     max-height: 100px;
@@ -59,6 +63,10 @@ const StyledButtonRow = styled(Row)`
       height: 120px;
       font-size: 12px;
       text-align: center;
+    }
+
+    @media (max-width: 430px) {
+      border-bottom: none;
     }
   }
 `;
