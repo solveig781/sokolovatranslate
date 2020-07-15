@@ -9,12 +9,12 @@ import {
 import { HeaderButtonReversed } from '../../header-buttons';
 import WhiteArrow from './whiteArrow';
 
-function General() {
+function Technology() {
   return (
     <>
       <HeaderButtonContainer>
         <HeaderButtonReversed
-          onClick={() => window.open('/Full_General_SashaSokolova .pdf')}
+          onClick={() => window.open('/Full_Technology_SashaSokolova.pdf')}
         >
           FULL TEXT
         </HeaderButtonReversed>
@@ -52,4 +52,4 @@ function General() {
   );
 }
 
-export default General;
+export default Technology;

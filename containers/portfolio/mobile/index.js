@@ -12,14 +12,14 @@ import {
 
 import Marketing from './examples/marketing';
 import Hospitality from './examples/hospitality';
-import General from './examples/general';
+import Technology from './examples/technology';
 import Civil from './examples/civil';
 
 const titles = [
   // each of the tab headers
   'MARKETING',
   'HOSPITALITY',
-  'GENERAL',
+  'TECHNOLOGY',
   'CIVIL',
 ];
 
@@ -27,7 +27,7 @@ const tabs = [
   // each of the tab content as a function
   () => <Marketing />,
   () => <Hospitality />,
-  () => <General />,
+  () => <Technology />,
   () => <Civil />,
 ];
 
@@ -44,11 +44,11 @@ function MobilePortfolio() {
     <PageStyle>
       <TranslationTypeHeader>
         <UnpaddedButton onClick={left}>
-          <BlackArrowLeft />
+          {index !== 0 && <BlackArrowLeft />}
         </UnpaddedButton>
         {titleContent}
         <UnpaddedButton onClick={right}>
-          <BlackArrowRight />
+          {index !== titles.length - 1 && <BlackArrowRight />}
         </UnpaddedButton>
       </TranslationTypeHeader>
 

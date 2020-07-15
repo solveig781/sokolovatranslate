@@ -1,13 +1,13 @@
 import hospitalityExample from './hospitality';
 import marketingExample from './marketing';
 import websitesExample from './websites';
-import generalExample from './general';
+import technologyExample from './technology';
 import civilExample from './civil';
 
 export default {
   hospitality: hospitalityExample,
   marketing: marketingExample,
   websites: websitesExample,
-  general: generalExample,
+  technology: technologyExample,
   civil: civilExample,
 };
