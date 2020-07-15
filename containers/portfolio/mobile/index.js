@@ -11,16 +11,24 @@ import {
 } from './styles';
 
 import Marketing from './examples/marketing';
+import Hospitality from './examples/hospitality';
+import General from './examples/general';
+import Civil from './examples/civil';
 
 const titles = [
   // each of the tab headers
   'MARKETING',
-  'Other',
+  'HOSPITALITY',
+  'GENERAL',
+  'CIVIL',
 ];
 
 const tabs = [
   // each of the tab content as a function
   () => <Marketing />,
+  () => <Hospitality />,
+  () => <General />,
+  () => <Civil />,
 ];
 
 function MobilePortfolio() {
@@ -38,7 +46,7 @@ function MobilePortfolio() {
         <UnpaddedButton onClick={left}>
           <BlackArrowLeft />
         </UnpaddedButton>
-        {titleContent && titleContent}
+        {titleContent}
         <UnpaddedButton onClick={right}>
           <BlackArrowRight />
         </UnpaddedButton>

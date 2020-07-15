@@ -3,33 +3,33 @@ import React from 'react';
 export default function Lightening() {
   return (
     <svg
-      width="503"
-      height="197"
-      viewBox="0 0 503 197"
+      width="370"
+      height="146"
+      viewBox="0 0 370 146"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g filter="url(#filter0_d)">
+      <g opacity="0.35" filter="url(#filter0_d)">
         <path
-          d="M234.941 86.8595L4 61.7436L274.331 137.969L269.635 101.634L498.154 126.618L230.245 50.5238L234.941 86.8595Z"
-          fill="#AFAFAF"
+          d="M172.729 63.4608L4.00003 45.1108L201.508 100.802L198.077 74.2549L365.036 92.5091L169.298 36.9135L172.729 63.4608Z"
+          fill="#A2A2A2"
         />
         <path
-          d="M234.941 86.8595L4 61.7436L274.331 137.969L269.635 101.634L498.154 126.618L230.245 50.5238L234.941 86.8595Z"
+          d="M172.729 63.4608L4.00003 45.1108L201.508 100.802L198.077 74.2549L365.036 92.5091L169.298 36.9135L172.729 63.4608Z"
           fill="url(#paint0_linear)"
         />
       </g>
       <defs>
         <filter
           id="filter0_d"
-          x="-7.62939e-06"
+          x="6.10352e-05"
           y="0"
-          width="502.154"
-          height="196.362"
+          width="369.036"
+          height="145.62"
           filterUnits="userSpaceOnUse"
-          colorInterpolationFilters="sRGB"
+          color-interpolation-filters="sRGB"
         >
-          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -55,14 +55,14 @@ export default function Lightening() {
         </filter>
         <linearGradient
           id="paint0_linear"
-          x1="12.1812"
-          y1="125.053"
-          x2="489.973"
-          y2="63.3091"
+          x1="117.245"
+          y1="68.6778"
+          x2="359.444"
+          y2="82.5595"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="white" />
-          <stop offset="1" stopColor="white" stopOpacity="0" />
+          <stop stop-color="white" />
+          <stop offset="1" stop-color="white" stop-opacity="0" />
         </linearGradient>
       </defs>
     </svg>

@@ -13,9 +13,9 @@ const LanguageContainer = styled(Col)`
   position: relative;
 
   span {
-    padding: 20px;
+    padding: 15px;
     text-align: center;
-    background: #dbdbdb;
+    background: #efefef;
   }
 
   p {
@@ -52,7 +52,7 @@ const HeaderButtonContainer = styled(Row)`
 
 const PreviewContainer = styled(Row)`
   flex-grow: 1;
-  background: #f9f2ec;
+  background: rgba(255, 255, 255, 0.4);
   border-radius: 8px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 20px;
@@ -98,13 +98,13 @@ function Example({ selectedExample }) {
         )}
       </HeaderButtonContainer>
       <LanguageContainer>
-        <span>Source: {selectedContent.labelSource || 'English'}</span>
+        <span>Source {selectedContent.labelSource || ''}</span>
 
         {selectedContent && selectedContent.english}
       </LanguageContainer>
 
       <LanguageContainer>
-        <span>Target: {selectedContent.labelTarget || 'Russian'}</span>
+        <span>Target {selectedContent.labelTarget || ''}</span>
         {selectedContent && selectedContent.russian}
       </LanguageContainer>
     </PreviewContainer>

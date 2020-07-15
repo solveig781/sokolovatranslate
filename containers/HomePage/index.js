@@ -62,12 +62,13 @@ const NameHeadline = styled(Col)`
   ${H1} {
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 42px;
+
     font-family: Comfortaa, sans-serif;
     font-size: 35px;
     line-height: 33px;
     letter-spacing: 0.1em;
-
+    font-weight: light;
+    color: #3f3f3f;
     @media (max-width: 700px) {
       font-size: 20px;
     }
