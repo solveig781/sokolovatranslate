@@ -23,6 +23,12 @@ const StyledLightening = styled.div`
     bottom: 2%;
   }
 
+  @media (max-width: 320px) {
+    transform: scale(0.6, 0.6);
+    left: -80%;
+    bottom: -5%;
+  }
+
   @media (max-width: 360px) {
     transform: scale(0.6, 0.6);
     left: -80%;

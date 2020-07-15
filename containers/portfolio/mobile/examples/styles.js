@@ -16,6 +16,9 @@ export const HeaderButtonContainer = styled(Row)`
   @media (max-width: 385px) {
     min-height: 50px;
   }
+  @media (max-width: 320px) {
+    padding-top: 0;
+  }
 `;
 
 export const SourceContainer = styled(Col)`
@@ -23,6 +26,11 @@ export const SourceContainer = styled(Col)`
   padding-top: 10px;
   padding-bottom: 10px;
   align-items: center;
+  @media (max-width: 320px) {
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
   > ${S4} {
     color: white;
@@ -37,16 +45,25 @@ export const SourceContainer = styled(Col)`
     align-self: center;
     text-align: center;
 
-    @media (max-width: 355px) {
+    @media (max-width: 380px) {
       margin: 10px;
+      font-size: 12px;
+    }
+    @media (max-width: 320px) {
+      margin: 5px;
     }
   }
 
   > ${P5} {
     font-size: 13px;
-    @media (max-width: 355px) {
+    @media (max-width: 380px) {
       margin-top: 10px;
       margin-bottom: 10px;
+      font-size: 11px;
+    }
+
+    @media (max-width: 320px) {
+      margin: 5px;
     }
   }
 `;
@@ -56,6 +73,12 @@ export const TargetContainer = styled(Col)`
   align-items: center;
   padding-top: 10px;
 
+  @media (max-width: 320px) {
+    padding-top: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   > ${S4} {
     color: white;
     font-family: Montserrat;
@@ -69,16 +92,25 @@ export const TargetContainer = styled(Col)`
     align-self: center;
     text-align: center;
 
-    @media (max-width: 355px) {
+    @media (max-width: 380px) {
       margin: 10px;
+      font-size: 12px;
+    }
+    @media (max-width: 320px) {
+      margin: 5px;
+      padding-top: 0;
     }
   }
 
   > ${P5} {
     font-size: 13px;
-    @media (max-width: 355px) {
+    @media (max-width: 380px) {
       margin-top: 10px;
       margin-bottom: 10px;
+      font-size: 11px;
+    }
+    @media (max-width: 320px) {
+      margin: 5px;
     }
   }
 `;

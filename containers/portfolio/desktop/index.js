@@ -96,10 +96,10 @@ function DesktopPortfolio() {
             HOSPITALITY
           </Box>
           <Box
-            active={selectedExample === 'general'}
-            onClick={() => setSelectedExample('general')}
+            active={selectedExample === 'technology'}
+            onClick={() => setSelectedExample('technology')}
           >
-            GENERAL
+            TECHNOLOGY
           </Box>
           <Box
             active={selectedExample === 'civil'}

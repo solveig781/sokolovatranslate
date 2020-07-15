@@ -6,19 +6,24 @@ import {
   SourceContainer,
   TargetContainer,
 } from './styles';
-import { HeaderButtonReversed } from '../../header-buttons';
+import { HeaderButton, HeaderButtonReversed } from '../../header-buttons';
 import WhiteArrow from './whiteArrow';
 
 function Civil() {
   return (
     <>
       <HeaderButtonContainer>
+        <HeaderButton
+          onClick={() => window.open('/SashaSokolova_Diploma_Original.pdf')}
+        >
+          ORIGINAL
+        </HeaderButton>
         <HeaderButtonReversed
           onClick={() =>
             window.open('/Bachelor_Diploma_AleksandraSokolova.pdf')
           }
         >
-          FULL TEXT
+          TRANSLATED
         </HeaderButtonReversed>
       </HeaderButtonContainer>
 

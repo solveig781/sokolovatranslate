@@ -3,7 +3,7 @@ import { P5, P4 } from 'components';
 
 export default {
   publication: '',
-  fulltext: '/Full_General_SashaSokolova .pdf',
+  fulltext: '/Full_Technology_SashaSokolova.pdf',
   english: (
     <>
       <P4>Android vs iOS</P4>

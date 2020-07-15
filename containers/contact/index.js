@@ -133,9 +133,15 @@ const Icons = styled(Col)`
   justify-content: center;
   padding: 20px;
   margin-bottom: 20px;
+  position: relative;
 
   @media (max-width: 700px) {
     margin-top: 50px;
+  }
+  @media (max-width: 320px) {
+    position: relative;
+    right: 3%;
+    margin-top: 20px;
   }
 `;
 

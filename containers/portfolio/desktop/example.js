@@ -26,6 +26,7 @@ const LanguageContainer = styled(Col)`
     padding-right: 8px;
   }
   > ${P4} {
+    margin-top: 40px;
     text-align: center;
   }
   > ${P5} {
