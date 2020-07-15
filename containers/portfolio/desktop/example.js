@@ -2,10 +2,10 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import { P4, P5, Col, Row, Button } from 'components';
+import { P4, P5, Col, Row } from 'components';
 
 import ALL_EXAMPLES from './examples';
-import { HeaderButton, HeaderButtonReversed } from './header-buttons';
+import { HeaderButton, HeaderButtonReversed } from '../header-buttons';
 
 const LanguageContainer = styled(Col)`
   flex-grow: 1;
