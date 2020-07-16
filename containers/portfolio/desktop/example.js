@@ -25,16 +25,19 @@ const LanguageContainer = styled(Col)`
     padding-left: 8px;
     padding-right: 8px;
   }
+
   > ${P4} {
     margin-top: 40px;
     text-align: center;
   }
+
   > ${P5} {
     padding-left: 40px;
     padding-right: 40px;
     text-align: justify;
     font-size: 14px;
   }
+
   @media (max-width: 700px) {
     background: none;
   }

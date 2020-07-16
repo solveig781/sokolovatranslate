@@ -17,7 +17,7 @@ export default function Lightening() {
         <path
           d="M442.32 232.871L63.2247 5.93593e-06L474.69 419.419L491.686 302.35L866.714 533.194L459.315 115.802L442.32 232.871Z"
           fill="url(#paint0_linear)"
-          fill-opacity="0.6"
+          fillOpacity="0.6"
         />
       </g>
       <defs>
@@ -28,9 +28,9 @@ export default function Lightening() {
           width="929.939"
           height="541.194"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -62,8 +62,8 @@ export default function Lightening() {
           y2="354.476"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F8F8F8" />
-          <stop offset="0.661458" stop-color="white" stop-opacity="0" />
+          <stop stopColor="#F8F8F8" />
+          <stop offset="0.661458" stopColor="white" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

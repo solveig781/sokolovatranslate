@@ -11,6 +11,7 @@ const StyledLightening = styled.div`
   position: absolute;
   left: 35%;
   bottom: -15%;
+  z-index: 0;
 
   @media (max-width: 700px) {
     left: 10%;
@@ -80,6 +81,7 @@ const StyledHomePage = styled(Col)`
 const NameColumn = styled(Col)`
   height: 100%;
   justify-content: space-between;
+  z-index: 1;
 `;
 
 const NameHeadline = styled(Col)`

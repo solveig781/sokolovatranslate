@@ -28,6 +28,8 @@ const TextGenerator = index => styled.span`
 
 const ParagraphGenerator = index => styled.p`
   color: ${textColor};
+
+  font-family: Inter, sans-serif;
   font-size: ${textSize(index)}rem;
 `;
 

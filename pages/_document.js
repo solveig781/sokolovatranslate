@@ -68,7 +68,7 @@ export default class DefaultDocument extends Document {
   render() {
     const pageTitle = 'Sasha Sokolova';
     const pageDescription =
-      'English - Russian translator. Localisation for websites, apps, games, and more at competitive prices.';
+      'EN-RU translator. Localisation for websites, apps, games, and more at competitive prices.';
 
     const { hostName } = this.props;
 
@@ -79,7 +79,7 @@ export default class DefaultDocument extends Document {
           <meta property="og:type" content="website" />
           <meta property="og:title" content={pageTitle} />
           <meta property="og:description" content={pageDescription} />
-          <meta property="og:image" content={`${hostName}og_thumbnail.jpg`} />
+          <meta property="og:image" content={`${hostName}thumbnail.jpg`} />
           <meta name="twitter:card" content="summary_large_image" />
           <meta charSet="utf-8" />
           <meta name="robots" content="index, follow" />
@@ -105,17 +105,7 @@ export default class DefaultDocument extends Document {
           {/* Nicer fonts */}
           <link
             async
-            href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Comfortaa:wght@300&family=Montserrat&display=swap"
-            rel="stylesheet"
-          />
-          <link
-            async
-            href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-            rel="stylesheet"
-          />
-          <link
-            async
-            href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Montserrat&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Inter:wght@300&family=Montserrat:wght@300&display=swap"
             rel="stylesheet"
           />
         </Head>
