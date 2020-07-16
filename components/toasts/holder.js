@@ -6,13 +6,13 @@ const ButterToastStyled = styled(ButterToast)`
   z-index: 200;
 `;
 
-function Toasts({ className }) {
+function Toasts({ className, vertical, horizontal }) {
   return (
     <ButterToastStyled
       className={className}
       position={{
-        vertical: POS_TOP,
-        horizontal: POS_CENTER,
+        vertical: vertical || POS_TOP,
+        horizontal: horizontal || POS_CENTER,
       }}
     />
   );

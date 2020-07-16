@@ -2,8 +2,9 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import copy from 'copy-to-clipboard';
 
-import { Col, S1, Row, S4, Button } from 'components';
+import { Col, S1, Row, S4, Button, Toasts } from 'components';
 
 import LinkedInIcon from './linkedin';
 
@@ -243,7 +244,15 @@ function Contact() {
         <S1>Contact me for some language magic</S1>
       </Header>
       <Icons>
-        <ButtonRow>
+        <ButtonRow
+          onClick={() => {
+            Toasts.create.success({
+              title: 'Email copied',
+              content: <span>Hooray!</span>,
+            });
+            copy('sokolova.alexandra812@gmail.com');
+          }}
+        >
           <S4>sokolova.alexandra812@gmail.com</S4>
         </ButtonRow>
         <ButtonRow>
@@ -258,6 +267,7 @@ function Contact() {
           </Button>
         </ButtonRow>
       </Icons>
+      <Toasts.Holder />
     </PageWrapper>
   );
 }
