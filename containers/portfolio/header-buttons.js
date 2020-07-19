@@ -12,13 +12,8 @@ export const HeaderButton = styled(Button)`
   margin-left: 10px;
   margin-right: 10px;
   color: black;
-  background: linear-gradient(
-      240.64deg,
-      rgba(255, 255, 255, 0.65) 0%,
-      rgba(255, 255, 255, 0) 61.27%
-    ),
-    #cbffe1;
-  border: 1px solid #000000;
+  background: #f5e7cc;
+  border: 1px solid #cacaca;
 
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -34,12 +29,8 @@ export const HeaderButton = styled(Button)`
 `;
 
 export const HeaderButtonReversed = styled(HeaderButton)`
-  background: linear-gradient(
-      120.61deg,
-      rgba(255, 255, 255, 0.65) 0%,
-      rgba(255, 255, 255, 0) 61.37%
-    ),
-    #cbffe1;
+  background: #F5E7CC;
+  1px solid #C2C2C2;
   @media (max-width: 700px) {
     width: 90px;
     height: 40px;
