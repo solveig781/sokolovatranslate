@@ -180,9 +180,6 @@ const ButtonRow = styled(Row)`
         position: relative;
         bottom: 4px;
       }
-
-      path {
-      }
     }
   }
 `;

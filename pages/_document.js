@@ -108,6 +108,31 @@ export default class DefaultDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Inter:wght@300&family=Montserrat:wght@300&display=swap"
           />
+
+          {/* Fonts for game landing page */}
+          <link
+            async
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            async
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
+          />
+
+          <link
+            async
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+          />
+
+          <link
+            async
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+          />
         </Head>
         <body>
           <main>
