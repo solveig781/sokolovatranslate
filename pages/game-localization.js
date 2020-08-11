@@ -4,7 +4,7 @@ import { Page } from 'components';
 
 import Gamehome from 'containers/GameHome';
 import Gamelanding from 'containers/gamelanding';
-import Portfolio from 'containers/portfolio';
+import LastGameScroll from 'containers/lastgamescroll';
 
 function Index() {
   return (
@@ -15,7 +15,9 @@ function Index() {
       <Page fullHeight>
         <Gamelanding />
       </Page>
-      <Page fullHeight>This is games site</Page>
+      <Page fullHeight>
+        <LastGameScroll />
+      </Page>
     </>
   );
 }

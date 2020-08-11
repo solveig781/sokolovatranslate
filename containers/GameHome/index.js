@@ -45,32 +45,34 @@ const CharacterBox = styled(Row)`
 `;
 
 const SpeechBalloon = styled.div`
-  position: absoulte;
-  margin-bottom: 20%;
-  margin-left: -8%;
+  position: relative;
+  bottom: 22%;
+  right: 10%;
 `;
+
 const Speech = styled(Col)`
   position: absolute;
-  width: 50%;
-  margin-top: 1%;
-  margin-left: 5%;
+  width: 80%;
+  right: 8%;
+  top: 10%;
+
   line-height: 25px;
 
   ${S2} {
     color: black;
     font-size: 16px;
-    font-family: "Press Start 2P";
+    font-family: 'Press Start 2P';
+  }
 `;
 
 const StyledCharacter = styled.div`
-  // position: absoulte;
   margin-left: 8%;
   margin-top: 4%;
   paddng: 0;
 `;
 
 const FooterButtonRow = styled(Row)`
-  width: 37%;
+  width: 45%;
   justify-content: space-between;
 
   > ${Button} {
