@@ -36,8 +36,13 @@ const Header = styled(Col)`
     font-family: Lato;
   }
 `;
+
+const LeftContainer = styled(Col)`
+  width: 40%;
+  height: 100%;
+  justify-content: space-between;
+`;
 const CharacterBox = styled(Row)`
-  justify-content: cneter;
   align-items: center;
 
   width: 50%;
@@ -72,13 +77,14 @@ const StyledCharacter = styled.div`
 `;
 
 const FooterButtonRow = styled(Row)`
-  width: 45%;
+  width: 100%;
   justify-content: space-between;
+  min-height: 40px;
 
   > ${Button} {
     font-size: 16px;
     padding: 0;
-    padding-bottom: 5px;
+
     border-bottom: 0;
     text-transform: none;
     font-family: Roboto;
@@ -106,34 +112,41 @@ function Gamehome() {
         <H1>Sasha Sokolova</H1>
         <H3>Your game speaks Russian</H3>
       </Header>
-
-      <CharacterBox>
-        <StyledCharacter>
-          <img width="173" height="145" alt="Game character" src="knight.png" />
-        </StyledCharacter>
-        <SpeechBalloon>
-          <Speech>
-            <S2>Привет!</S2>
-            <S2>Я говорю по-русски :)</S2>
-          </Speech>
-          <SpeechBalloonIcon />
-        </SpeechBalloon>
-      </CharacterBox>
-      <FooterButtonRow>
-        <Button
-          onClick={() => {
-            Toasts.create.success({
-              title: 'Email copied',
-              content: <span>Hooray!</span>,
-            });
-            copy('hisasha781@gmail.com');
-          }}
-        >
-          hisasha781@gmail.com
-        </Button>
-        <Button onClick={openFacebook}>facebook</Button>
-        <Button onClick={openLinkedIn}>linkedin</Button>
-      </FooterButtonRow>
+      <LeftContainer>
+        <div />
+        <CharacterBox>
+          <StyledCharacter>
+            <img
+              width="173"
+              height="145"
+              alt="Game character"
+              src="knight.png"
+            />
+          </StyledCharacter>
+          <SpeechBalloon>
+            <Speech>
+              <S2>Привет!</S2>
+              <S2>Я говорю по-русски :)</S2>
+            </Speech>
+            <SpeechBalloonIcon />
+          </SpeechBalloon>
+        </CharacterBox>
+        <FooterButtonRow>
+          <Button
+            onClick={() => {
+              Toasts.create.success({
+                title: 'Email copied',
+                content: <span>Hooray!</span>,
+              });
+              copy('hisasha781@gmail.com');
+            }}
+          >
+            hisasha781@gmail.com
+          </Button>
+          <Button onClick={openFacebook}>facebook</Button>
+          <Button onClick={openLinkedIn}>linkedin</Button>
+        </FooterButtonRow>
+      </LeftContainer>
       <Toasts.Holder />
     </HomePage>
   );

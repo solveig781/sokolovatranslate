@@ -3,7 +3,7 @@ import React from 'react';
 import { Page } from 'components';
 
 import Gamehome from 'containers/GameHome';
-import Gamelanding from 'containers/gamelanding';
+import GameLanding from 'containers/GameLanding';
 import LastGameScroll from 'containers/lastgamescroll';
 
 function Index() {
@@ -13,7 +13,7 @@ function Index() {
         <Gamehome />
       </Page>
       <Page fullHeight>
-        <Gamelanding />
+        <GameLanding />
       </Page>
       <Page fullHeight>
         <LastGameScroll />

@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 import { Col, Row, H1, H6, S3, Button } from 'components';
 
+import GreyArrowLeft from './greyarrowleft';
+import GreyArrowRight from './greyarrowright';
+
 const HomePage = styled(Row)`
   width: 100%;
   height: 100%;
@@ -59,19 +62,47 @@ const ShortText = styled(Col)`
   margin-left: 35px;
   line-height: 30px;
 `;
+
 const InfoContainer = styled(Col)`
   width: 60%;
   height: 100%;
   background: rgba(237, 245, 225, 0.2);
+
+  position: relative;
+  left: 100vw;
+  opacity: 0;
+
+  transition: all 0.5s ease;
+
+  &.visible {
+    opacity: 1;
+    left: 0;
+  }
+`;
+
+const MediaContainer = styled(Row)`
+  width: auto;
+  height: 70%;
+  justify-content: space-around;
+  align-items: center;
+
+  > ${Button} {
+    padding: 0;
+    margin: 0;
+    border-bottom: none;
+
+    &:hover {
+      background: none;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.45));
+    }
+  }
 `;
 
 const BigPicPreview = styled.div`
-  margin: 3%;
-  margin-left: 13%;
-  margin-right: 13%;
-  border: 0.5px solid #656565;
+  width: 80%;
+  height: 85%;
 
-  height: 60%;
+  border: 0.5px solid #656565;
 
   background: url(preview1.png) no-repeat center center;
   background-size: cover;
@@ -85,7 +116,7 @@ const BigText = styled(Col)`
   line-height: 30px;
 `;
 
-function Gamelanding() {
+function GameLanding() {
   // Declare a new state variable, which we'll call "count"
   const [canSee, setCanSee] = useState(false);
 
@@ -107,19 +138,25 @@ function Gamelanding() {
           </ShortText>
         </TextContainer>
       </PreviewBox>
-      {canSee && (
-        <InfoContainer>
+      <InfoContainer className={canSee && 'visible'}>
+        <MediaContainer>
+          <Button>
+            <GreyArrowLeft />
+          </Button>
           <BigPicPreview />
-          <BigText>
-            <S3>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua
-            </S3>
-          </BigText>
-        </InfoContainer>
-      )}
+          <Button>
+            <GreyArrowRight />
+          </Button>
+        </MediaContainer>
+        <BigText>
+          <S3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua
+          </S3>
+        </BigText>
+      </InfoContainer>
     </HomePage>
   );
 }
 
-export default Gamelanding;
+export default GameLanding;
