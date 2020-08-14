@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { Col, Row, H1, H6, S3, Button } from 'components';
-
-import GreyArrowLeft from './greyarrowleft';
-import GreyArrowRight from './greyarrowright';
+import { Col, Row, H5, S3, Button } from 'components';
+import Slider from './slider';
 
 const HomePage = styled(Row)`
   width: 100%;
@@ -24,96 +22,59 @@ const PreviewBox = styled(Col)`
   left: 6%;
   width: 30%;
   height: 70%;
+
   background: rgba(237, 245, 225, 0.2);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
 
   cursor: pointer;
   &:hover {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-    background: rgba(164, 164, 164, 0.2);
+    background: rgba(71, 71, 71, 0.2);
   }
 `;
 
 const PreviewPic = styled.div`
   margin: 8px;
-  border: 0.5px solid #656565;
+  border: 0.5px solid #9c9c9c;
 
-  height: 50%;
+  height: 65%;
 
   background: url(preview1.png) no-repeat center center;
   background-size: cover;
 `;
 
 const TextContainer = styled(Col)`
+  justify-content: center;
   width: 100%;
+  height: 30%;
 `;
 
-const GameName = styled(Row)`
-  font-size: 28px;
+const GameName = styled(Col)`
+  font-size: 32px;
   font-family: Josefin Sans;
   justify-content: center;
-  margin: 15px;
-`;
-
-const ShortText = styled(Col)`
-  font-size: 20px;
-  font-family: Lato;
-  margin: 30px;
-  margin-left: 35px;
-  line-height: 30px;
-`;
-
-const InfoContainer = styled(Col)`
-  width: 60%;
-  height: 100%;
-  background: rgba(237, 245, 225, 0.2);
-
-  position: relative;
-  left: 100vw;
-  opacity: 0;
-
-  transition: all 0.5s ease;
-
-  &.visible {
-    opacity: 1;
-    left: 0;
-  }
-`;
-
-const MediaContainer = styled(Row)`
-  width: auto;
-  height: 70%;
-  justify-content: space-around;
   align-items: center;
+  margin: 15px;
+  letter-spacing: 0.05em;
 
-  > ${Button} {
-    padding: 0;
-    margin: 0;
-    border-bottom: none;
-
-    &:hover {
-      background: none;
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.45));
-    }
+  ${H5} {
+    font-size: 40px;
   }
 `;
+const ShortText = styled(Row)`
+  position: absolute;
+  width: 35%;
+  left: 45%;
+  align-self: center;
 
-const BigPicPreview = styled.div`
-  width: 80%;
-  height: 85%;
+  height: 15%;
+  margin: 30px;
 
-  border: 0.5px solid #656565;
-
-  background: url(preview1.png) no-repeat center center;
-  background-size: cover;
-`;
-
-const BigText = styled(Col)`
-  font-size: 20px;
   font-family: Lato;
-  margin: 10%;
-  margin-top: 5%;
-  line-height: 30px;
+  line-height: 40px;
+
+  ${S3} {
+    font-size: 24px;
+  }
 `;
 
 function GameLanding() {
@@ -122,39 +83,25 @@ function GameLanding() {
 
   const toggle = () => setCanSee(!canSee);
 
+  const imagesToPass = ['preview1.png', 'preview2.png'];
+
   return (
     <HomePage>
       <PreviewBox onClick={toggle}>
         <PreviewPic />
         <TextContainer>
           <GameName>
-            <H6>Party Arena</H6>
+            <H5>Party Arena</H5>
           </GameName>
-          <ShortText>
-            <S3>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua
-            </S3>
-          </ShortText>
         </TextContainer>
       </PreviewBox>
-      <InfoContainer className={canSee && 'visible'}>
-        <MediaContainer>
-          <Button>
-            <GreyArrowLeft />
-          </Button>
-          <BigPicPreview />
-          <Button>
-            <GreyArrowRight />
-          </Button>
-        </MediaContainer>
-        <BigText>
-          <S3>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
-          </S3>
-        </BigText>
-      </InfoContainer>
+      <ShortText>
+        <S3>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </S3>
+      </ShortText>
+      <Slider show={canSee} images={imagesToPass} />
     </HomePage>
   );
 }

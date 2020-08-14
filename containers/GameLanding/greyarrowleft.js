@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function GreyArrowLeft() {
+function GreyArrowLeft() {
   return (
     <svg
       width="28"
@@ -10,11 +10,13 @@ export default function GreyArrowLeft() {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M26.7204 0.693642L0.720354 27.6936L1.44067 27L27.4407 54L26.7204 54.6936L0.720354 27.6936L3.43323e-05 27L26 0L26.7204 0.693642Z"
         fill="#4F4F4F"
       />
     </svg>
   );
 }
+
+export default GreyArrowLeft;
