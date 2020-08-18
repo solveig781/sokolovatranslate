@@ -154,8 +154,6 @@ function Slider({
     setPictureIndex(pictureIndex - 1);
   };
 
-  console.log(mobileTitle);
-
   return (
     <InfoContainer className={show && 'visible'}>
       {/* && means "do what's in the quotes if the first thing is true"  */}

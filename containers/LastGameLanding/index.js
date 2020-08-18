@@ -23,6 +23,7 @@ const HomePage = styled(Col)`
 `;
 
 const TextContainer = styled(Col)`
+  flex-grow: 1;
   position: relative;
   justify-content: center;
   @media (max-width: 768px) {
