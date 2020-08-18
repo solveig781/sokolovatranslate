@@ -3,8 +3,7 @@ import { useIsVisible } from 'react-is-visible';
 
 import styled from 'styled-components';
 
-import { Col, Row, H5, S3, Button } from 'components';
-import Slider from './slider';
+import { Col, Row, H5, Button, Slider } from 'components';
 
 const HomePage = styled(Row)`
   width: 100%;
@@ -26,8 +25,7 @@ const HomePage = styled(Row)`
 const TextContainer = styled(Col)`
   position: relative;
   justify-content: center;
-  width: 35%;
-  height: 30%;
+  flex-grow: 1;
 
   @media (max-width: 768px) {
     display: none;
@@ -36,7 +34,6 @@ const TextContainer = styled(Col)`
 
 const GameHeader = styled(Col)`
   position: relative;
-  top: 60%;
   font-family: Josefin Sans;
   justify-content: center;
   align-items: center;

@@ -4,6 +4,7 @@ export { default as Page } from './page';
 export { default as Card } from './card';
 export { default as Input } from './input';
 export { default as Theme } from './theme';
+export { default as Slider } from './slider';
 export { default as Button } from './button';
 export { default as Toasts } from './toasts';
 export { default as Header } from './header';

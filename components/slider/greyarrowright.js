@@ -3,16 +3,16 @@ import React from 'react';
 function GreyArrowRight() {
   return (
     <svg
-      width="28"
-      height="55"
-      viewBox="0 0 28 55"
+      width="30"
+      height="56"
+      viewBox="0 0 30 56"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M0.720319 0.693642L26.7203 27.6936L26 27L0 54L0.72032 54.6936L26.7203 27.6936L27.4406 27L1.44064 0L0.720319 0.693642Z"
+        d="M27.7193 28.6924L1.72045 55.69L0.279785 54.3027L26.2792 27.3045L27.704 28.6765L1.72047 1.69362L3.16111 0.306335L29.1599 27.3051L27.7193 28.6924Z"
         fill="#4F4F4F"
       />
     </svg>

@@ -4,7 +4,7 @@ import { Page } from 'components';
 
 import Gamehome from 'containers/GameHome';
 import GameLanding from 'containers/GameLanding';
-import LastGameScroll from 'containers/lastgamescroll';
+import LastGameLanding from 'containers/LastGameLanding';
 
 function Index() {
   return (
@@ -25,14 +25,21 @@ function Index() {
       </Page>
       <Page fullHeight>
         <GameLanding
-          background="#17303F"
+          background="#550C67"
           title="Some card shit"
           developer="Bombay Play"
           images={['preview1.png', 'preview2.png']}
         />
       </Page>
       <Page fullHeight>
-        <LastGameScroll />
+        <LastGameLanding
+          background="#26536C"
+          title="Last Game Here"
+          developer="Bombay Play"
+          mobileTitle="Party Arena"
+          mobileDeveloper="Funture Games"
+          images={['preview1.png', 'preview2.png']}
+        />
       </Page>
     </>
   );

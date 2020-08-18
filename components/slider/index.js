@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { Col, Row, S3, H3, Button } from 'components';
+import { Col, Row } from '../flex';
+import { S3, H3 } from '../text';
+import Button from '../button';
 
 import GreyArrowLeft from './greyarrowleft';
 import GreyArrowRight from './greyarrowright';

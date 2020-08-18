@@ -7,8 +7,7 @@ import { Col, Row, H1, H3, S2, Button, Toasts } from 'components';
 import SpeechBalloonIcon from './speechballoon';
 
 const HomePage = styled(Col)`
-  padding: 20px;
-
+  width: 100%;
   height: 100%;
   background: #3cc37c;
   justify-content: space-between;
@@ -23,8 +22,8 @@ const HomePage = styled(Col)`
 `;
 
 const Header = styled(Col)`
-  /* width: 85%; */
   align-items: flex-end;
+  margin-right: 5%;
 
   ${H1} {
     font-size: 40px;
@@ -53,12 +52,17 @@ const Header = styled(Col)`
 `;
 
 const LeftContainer = styled(Col)`
-  width: 40%;
   height: 100%;
   justify-content: space-between;
+  margin-left: 5%;
 
-  @media (max-width: 770px) {
-    width: 100%;
+  @media (min-width: 768px) {
+    max-width: 40%;
+  }
+
+  @media (max-width: 768px) {
+    flex-grow: 1;
+    margin-right: 5%;
   }
 `;
 const CharacterBox = styled(Row)`
@@ -102,7 +106,7 @@ const SpeechBalloon = styled.div`
   }
 
   @media (min-width: 320px) and (max-width: 342px) {
-    right: 0%;
+    right: 150%;
     bottom: 5%;
   }
 `;
@@ -151,6 +155,11 @@ const FooterButtonRow = styled(Row)`
   width: 100%;
   justify-content: space-between;
   min-height: 40px;
+  margin-bottom: 3%;
+
+  @media (max-width: 768px) {
+    padding-right: 5%;
+  }
 
   > ${Button} {
     font-size: 16px;
@@ -165,6 +174,7 @@ const FooterButtonRow = styled(Row)`
       background: none;
       border-bottom: 5px solid white;
     }
+
     @media (max-width: 340px) {
       font-size: 13px;
     }
