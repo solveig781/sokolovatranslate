@@ -7,10 +7,8 @@ import { Col, Row, H1, H3, S2, Button, Toasts } from 'components';
 import SpeechBalloonIcon from './speechballoon';
 
 const HomePage = styled(Col)`
-  padding: 3%;
-  padding-left: 7%;
-  padding-right: 7%;
-  width: 100%;
+  padding: 20px;
+
   height: 100%;
   background: #3cc37c;
   justify-content: space-between;
@@ -21,19 +19,32 @@ const HomePage = styled(Col)`
 `;
 
 const Header = styled(Col)`
-  width: 85%;
+  /* width: 85%; */
   align-items: flex-end;
 
   ${H1} {
     font-size: 40px;
     margin-bottom: 5px;
     font-family: Josefin Sans;
+
+    @media (max-width: 340px) {
+      font-size: 36px;
+    }
   }
 
   ${H3} {
     font-size: 34px;
     margin-top: 5px;
     font-family: Lato;
+
+    @media (max-width: 430px) {
+      font-size: 26px;
+    }
+
+    @media (max-width: 340px) {
+      font-size: 23px;
+      text-align: right;
+    }
   }
 `;
 
@@ -41,6 +52,10 @@ const LeftContainer = styled(Col)`
   width: 40%;
   height: 100%;
   justify-content: space-between;
+
+  @media (max-width: 770px) {
+    width: 100%;
+  }
 `;
 const CharacterBox = styled(Row)`
   align-items: center;
@@ -51,8 +66,41 @@ const CharacterBox = styled(Row)`
 
 const SpeechBalloon = styled.div`
   position: relative;
-  bottom: 22%;
-  right: 10%;
+  bottom: 35%;
+  right: 20%;
+
+  @media (max-width: 630px) {
+    bottom: 40%;
+    right: 18%;
+  }
+
+  @media (max-width: 610px) {
+    transform: scale(0.9, 0.9);
+    right: 25%;
+  }
+
+  @media (max-width: 570px) {
+    transform: scale(0.7, 0.7);
+    right: 40%;
+    bottom: 30%;
+  }
+
+  @media (max-width: 500px) {
+    transform: scale(0.5, 0.5);
+    right: 90%;
+  }
+
+  @media (max-width: 390px) {
+    transform: scale(0.4, 0.4);
+
+    right: 115%;
+    bottom: 15%;
+  }
+
+  @media (min-width: 320px) and (max-width: 342px) {
+    right: 150%;
+    bottom: 5%;
+  }
 `;
 
 const Speech = styled(Col)`
@@ -74,6 +122,25 @@ const StyledCharacter = styled.div`
   margin-left: 8%;
   margin-top: 4%;
   paddng: 0;
+
+  @media (max-width: 340px) {
+    position: relative;
+    top: 15%;
+  }
+
+  @media (max-width: 390px) {
+    transform: scale(0.9, 0.9);
+
+    position: relative;
+    top: 10%;
+  }
+
+  @media (max-width: 342px) {
+    transform: scale(0.7, 0.7);
+    position: relative;
+    right: 10%;
+    top: 20%;
+  }
 `;
 
 const FooterButtonRow = styled(Row)`
@@ -93,6 +160,9 @@ const FooterButtonRow = styled(Row)`
       color: white;
       background: none;
       border-bottom: 5px solid white;
+    }
+    @media (max-width: 340px) {
+      font-size: 13px;
     }
   }
 `;

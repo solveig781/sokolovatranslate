@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
+import { useIsVisible } from 'react-is-visible';
+
 import styled from 'styled-components';
 
 import { Col, Row, H5, S3, Button } from 'components';
@@ -7,49 +9,34 @@ import Slider from './slider';
 const HomePage = styled(Row)`
   width: 100%;
   height: 100%;
-  background: #379683;
+  background: ${({ background }) => background};
   justify-content: space-between;
+
+  /* Small hack so we can put a div
+     at 50% of the height. We'll use this 
+     div to show the slider when it becomes visible.
+     I.e, when the user has scrolled 50% down the "HomePage" */
+  position: relative;
 
   span {
     color: white;
   }
-  }
-`;
-
-const PreviewBox = styled(Col)`
-  position: relative;
-  top: 8%;
-  left: 6%;
-  width: 30%;
-  height: 70%;
-
-  background: rgba(237, 245, 225, 0.2);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
-
-  cursor: pointer;
-  &:hover {
-    background: rgba(71, 71, 71, 0.2);
-  }
-`;
-
-const PreviewPic = styled.div`
-  margin: 8px;
-  border: 0.5px solid #9c9c9c;
-
-  height: 65%;
-
-  background: url(preview1.png) no-repeat center center;
-  background-size: cover;
 `;
 
 const TextContainer = styled(Col)`
+  position: relative;
   justify-content: center;
-  width: 100%;
+  width: 35%;
   height: 30%;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
-const GameName = styled(Col)`
-  font-size: 32px;
+const GameHeader = styled(Col)`
+  position: relative;
+  top: 60%;
   font-family: Josefin Sans;
   justify-content: center;
   align-items: center;
@@ -59,49 +46,59 @@ const GameName = styled(Col)`
   ${H5} {
     font-size: 40px;
   }
-`;
-const ShortText = styled(Row)`
-  position: absolute;
-  width: 35%;
-  left: 45%;
-  align-self: center;
 
-  height: 15%;
-  margin: 30px;
+  ${Button} {
+    background: none;
+    padding: 10px;
+    text-transform: none;
+    font-family: Josefin Sans;
+    border-bottom: none;
+    font-size: 25px;
+    color: #d9d4d4;
+    max-height: 40px;
 
-  font-family: Lato;
-  line-height: 40px;
-
-  ${S3} {
-    font-size: 24px;
+    &:hover {
+      color: white;
+      background: none;
+      border-bottom: 4px solid #d9d4d4;
+    }
   }
 `;
 
-function GameLanding() {
-  // Declare a new state variable, which we'll call "count"
-  const [canSee, setCanSee] = useState(false);
+const VisibilityDiv = styled.div`
+  position: absolute;
+  top: 50%;
+`;
 
-  const toggle = () => setCanSee(!canSee);
-
-  const imagesToPass = ['preview1.png', 'preview2.png'];
+function GameLanding({
+  images,
+  title,
+  developer,
+  mobileTitle,
+  mobileDeveloper,
+  description,
+  background = '#379683',
+}) {
+  const nodeRef = useRef();
+  const isVisible = useIsVisible(nodeRef);
 
   return (
-    <HomePage>
-      <PreviewBox onClick={toggle}>
-        <PreviewPic />
-        <TextContainer>
-          <GameName>
-            <H5>Party Arena</H5>
-          </GameName>
-        </TextContainer>
-      </PreviewBox>
-      <ShortText>
-        <S3>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </S3>
-      </ShortText>
-      <Slider show={canSee} images={imagesToPass} />
+    <HomePage background={background}>
+      <VisibilityDiv ref={nodeRef} />
+      <TextContainer>
+        <GameHeader>
+          <H5>{title}</H5>
+          <Button>{developer}</Button>
+        </GameHeader>
+      </TextContainer>
+
+      <Slider
+        images={images}
+        show={isVisible}
+        mobileTitle={mobileTitle}
+        mobileDeveloper={mobileDeveloper}
+        description={description}
+      />
     </HomePage>
   );
 }

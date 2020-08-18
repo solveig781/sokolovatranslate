@@ -6062,10 +6062,10 @@ react-error-overlay@5.1.6:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.6.tgz#0cd73407c5d141f9638ae1e0c63e7b2bf7e9929d"
   integrity sha512-X1Y+0jR47ImDVr54Ab6V9eGk0Hnu7fVWGeHQSOXHf/C2pF9c6uy3gef8QUeuUiWlNb0i08InPSE5a/KJzNzw1Q==
 
-react-is-visible@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/react-is-visible/-/react-is-visible-1.0.5.tgz#a84d52b96d7e11d7187e1d5376f06c2fd5a4929a"
-  integrity sha512-LyIyY07LPnkKuY1TaQs4P7cxJ/7xWUgz/T97Vk7J1jUKpcQ19KQUcDHxxEmzb58yEZH5EdflI7V3DhSj8HnPJw==
+react-is-visible@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-is-visible/-/react-is-visible-1.1.1.tgz#c43c6308bbeac8d070bf6579421012c750989208"
+  integrity sha512-cDTkzpKcjEc7gC0CyzDfRJ/yaxLzZ6PyDjUtzlkusUsC8NO7X0vPuRKxW98gmI0aUxerQvN/1aQES3VjvTDInw==
   dependencies:
     "@babel/runtime" "^7.4.4"
     hoist-non-react-statics "3.3.0"
