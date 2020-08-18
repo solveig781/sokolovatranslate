@@ -16,6 +16,10 @@ const HomePage = styled(Col)`
   span {
     color: white;
   }
+
+  @media (max-width: 768px) {
+    background: #50bf85;
+  }
 `;
 
 const Header = styled(Col)`
@@ -98,7 +102,7 @@ const SpeechBalloon = styled.div`
   }
 
   @media (min-width: 320px) and (max-width: 342px) {
-    right: 150%;
+    right: 0%;
     bottom: 5%;
   }
 `;

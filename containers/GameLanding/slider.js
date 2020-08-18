@@ -102,6 +102,7 @@ const MobileGameHeader = styled(Col)`
   }
 
   ${H3} {
+    font-size: 28px;
     margin-bottom: 0;
   }
   ${Button} {
@@ -110,7 +111,7 @@ const MobileGameHeader = styled(Col)`
     text-transform: none;
     font-family: Josefin Sans;
     border-bottom: none;
-    font-size: 25px;
+    font-size: 22px;
     color: #d9d4d4;
     max-height: 40px;
 
