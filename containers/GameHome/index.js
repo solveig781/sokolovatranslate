@@ -18,7 +18,7 @@ const HomePage = styled(Col)`
   }
 
   @media (max-width: 768px) {
-    background: #57d090;
+    background: #77d5a4;
   }
 `;
 
