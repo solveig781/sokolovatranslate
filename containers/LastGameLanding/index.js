@@ -98,11 +98,12 @@ function LastGameLanding({
         </TextContainer>
 
         <Slider
+          className={isAtBottom && 'hide-description'}
           images={images}
           show={isVisible}
           mobileTitle={mobileTitle}
           mobileDeveloper={mobileDeveloper}
-          description={!isAtBottom && description}
+          description={description}
         />
       </SliderRow>
       <BottomBar />

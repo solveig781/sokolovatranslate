@@ -8,6 +8,22 @@ import Button from '../button';
 import GreyArrowLeft from './greyarrowleft';
 import GreyArrowRight from './greyarrowright';
 
+const BigText = styled(S3)`
+  margin: 10%;
+  margin-top: 2%;
+  line-height: 30px;
+
+  font-size: 20px;
+  font-family: Lato;
+
+  @media (max-width: 420px) {
+    font-size: 16px;
+    margin: 10%;
+    margin-top: 5%;
+    text-align: justify;
+  }
+`;
+
 const InfoContainer = styled(Col)`
   width: 65%;
   height: 100%;
@@ -23,11 +39,21 @@ const InfoContainer = styled(Col)`
     opacity: 1;
     left: 0;
   }
+
+  ${BigText} {
+    transition: all 0.5s ease;
+  }
+
   @media (max-width: 768px) {
     width: 100%;
     left: 0;
     opacity: 1;
     background: none;
+
+    /* Hide description on mobile when we show bottom bar */
+    &.hide-description ${BigText} {
+      opacity: 0;
+    }
   }
 `;
 
@@ -80,22 +106,6 @@ const BigPicPreview = styled.div`
   }
 `;
 
-const BigText = styled(S3)`
-  margin: 10%;
-  margin-top: 2%;
-  line-height: 30px;
-
-  font-size: 20px;
-  font-family: Lato;
-
-  @media (max-width: 420px) {
-    font-size: 16px;
-    margin: 10%;
-    margin-top: 5%;
-    text-align: justify;
-  }
-`;
-
 const MobileGameHeader = styled(Col)`
   justify-content: center;
   font-family: 'Josefin Sans';
@@ -132,6 +142,7 @@ const MobileGameHeader = styled(Col)`
 function Slider({
   show = true,
   images,
+  className = '',
   mobileTitle,
   mobileDeveloper,
   description,
@@ -158,8 +169,13 @@ function Slider({
     setPictureIndex(pictureIndex - 1);
   };
 
+  if (show) {
+    // eslint-disable-next-line no-param-reassign
+    className += ' visible';
+  }
+
   return (
-    <InfoContainer className={show && 'visible'}>
+    <InfoContainer className={className}>
       {/* && means "do what's in the quotes if the first thing is true"  */}
       {/* so it goes back to index.js to check if it's true */}
       {/* we have declared "visible in the stiles above" */}
