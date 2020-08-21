@@ -29,6 +29,8 @@ function Index() {
           title="Some card shit"
           developer="Bombay Play"
           images={['preview1.png', 'preview2.png']}
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua"
         />
       </Page>
       <Page fullHeight>
@@ -39,6 +41,8 @@ function Index() {
           mobileTitle="Party Arena"
           mobileDeveloper="Funture Games"
           images={['preview1.png', 'preview2.png']}
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua"
         />
       </Page>
     </>

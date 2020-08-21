@@ -50,6 +50,9 @@ const MediaContainer = styled(Row)`
   }
 
   > ${Button} {
+    &:focus {
+      outline: none;
+    }
     padding: 0;
     margin: 0;
     border-bottom: none;
@@ -78,7 +81,8 @@ const BigPicPreview = styled.div`
 `;
 
 const BigText = styled(S3)`
-  margin: 5%;
+  margin: 10%;
+  margin-top: 2%;
   line-height: 30px;
 
   font-size: 20px;
@@ -137,7 +141,7 @@ function Slider({
   // increases Picture Index by 1 and sets the original image (index - 0) when
   // it comes to the last,2 judging by the lenth of the row
   const nextPicture = () => {
-    if (pictureIndex >= images.length) {
+    if (pictureIndex >= images.length - 1) {
       setPictureIndex(0);
       return;
     }

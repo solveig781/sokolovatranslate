@@ -57,6 +57,7 @@ module.exports = compose(
   addModuleFolder('node_modules'),
 
   addAliasFolder('utils'),
+  addAliasFolder('hooks'),
   addAliasFolder('public'),
   addAliasFolder('contexts'),
   addAliasFolder('containers'),

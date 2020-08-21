@@ -3,7 +3,9 @@ import { useIsVisible } from 'react-is-visible';
 
 import styled from 'styled-components';
 
+import { useIsAtBottom } from 'hooks';
 import { Col, Row, H5, Button, Slider } from 'components';
+import BottomBar from './bottombar';
 
 const HomePage = styled(Col)`
   width: 100%;
@@ -62,39 +64,6 @@ const GameHeader = styled(Col)`
   }
 `;
 
-const FooterButtonRow = styled(Row)`
-  position: absolute;
-  bottom: 0;
-  border: 1px solid black;
-  width: 40%;
-  justify-content: space-between;
-  min-height: 40px;
-  margin: 3%;
-
-  @media (max-width: 768px) {
-    padding-right: 5%;
-  }
-
-  > ${Button} {
-    font-size: 16px;
-    padding: 0;
-
-    border-bottom: 0;
-    text-transform: none;
-    font-family: Roboto;
-
-    &:hover {
-      color: white;
-      background: none;
-      border-bottom: 5px solid white;
-    }
-
-    @media (max-width: 340px) {
-      font-size: 13px;
-    }
-  }
-`;
-
 const VisibilityDiv = styled.div`
   position: absolute;
   top: 50%;
@@ -103,14 +72,6 @@ const VisibilityDiv = styled.div`
 const SliderRow = styled(Row)`
   flex-grow: 1;
 `;
-
-function openLinkedIn() {
-  window.open('https://www.linkedin.com/in/sasha-sokolova-7aa70a177/');
-}
-
-function openFacebook() {
-  window.open('https://www.facebook.com/solveig781');
-}
 
 function LastGameLanding({
   images,
@@ -123,6 +84,7 @@ function LastGameLanding({
 }) {
   const nodeRef = useRef();
   const isVisible = useIsVisible(nodeRef);
+  const isAtBottom = useIsAtBottom(5);
 
   return (
     <HomePage background={background}>
@@ -140,24 +102,10 @@ function LastGameLanding({
           show={isVisible}
           mobileTitle={mobileTitle}
           mobileDeveloper={mobileDeveloper}
-          description={description}
+          description={!isAtBottom && description}
         />
       </SliderRow>
-      <FooterButtonRow>
-        <Button
-          onClick={() => {
-            Toasts.create.success({
-              title: 'Email copied',
-              content: <span>Hooray!</span>,
-            });
-            copy('hisasha781@gmail.com');
-          }}
-        >
-          hisasha781@gmail.com
-        </Button>
-        <Button onClick={openFacebook}>facebook</Button>
-        <Button onClick={openLinkedIn}>linkedin</Button>
-      </FooterButtonRow>
+      <BottomBar />
     </HomePage>
   );
 }

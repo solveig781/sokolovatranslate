@@ -24,6 +24,7 @@ const HomePage = styled(Col)`
 const Header = styled(Col)`
   align-items: flex-end;
   margin-right: 5%;
+  margin-top: 2%;
 
   ${H1} {
     font-size: 40px;
@@ -200,12 +201,7 @@ function Gamehome() {
         <div />
         <CharacterBox>
           <StyledCharacter>
-            <img
-              width="173"
-              height="145"
-              alt="Game character"
-              src="knight.png"
-            />
+            <img width="163" height="135" alt="Game character" src="Fox.png" />
           </StyledCharacter>
           <SpeechBalloon>
             <Speech>
