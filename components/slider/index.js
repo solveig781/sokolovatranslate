@@ -90,15 +90,15 @@ const MediaContainer = styled(Row)`
   }
 `;
 
-const BigPicPreview = styled.div`
+const BigPicPreview = styled.div`{
   width: 80%;
   height: 85%;
-
-  border: 0.5px solid #9c9c9c;
+  border: 1px solid black;
 
   background: url(${({ image }) => image}) no-repeat center center;
+  background-position: 0 0;
   background-size: cover;
-
+  image-rendering: pixelated;
   @media (max-width: 420px) {
     height: 95%;
     margin-top: 5%;
@@ -139,9 +139,26 @@ const MobileGameHeader = styled(Col)`
   }
 `;
 
+const ItemContainer = styled(Col)`
+  width: 100%;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+`;
+
+function getComponent(componentItem) {
+  /* This part is also important, show image based on pictureIndex */
+  if (typeof componentItem === 'string') {
+    return <BigPicPreview image={componentItem} />;
+  }
+
+  return componentItem;
+}
+
 function Slider({
   show = true,
-  images,
+  items = [],
   className = '',
   mobileTitle,
   mobileDeveloper,
@@ -152,7 +169,7 @@ function Slider({
   // increases Picture Index by 1 and sets the original image (index - 0) when
   // it comes to the last,2 judging by the lenth of the row
   const nextPicture = () => {
-    if (pictureIndex >= images.length - 1) {
+    if (pictureIndex >= items.length - 1) {
       setPictureIndex(0);
       return;
     }
@@ -162,7 +179,7 @@ function Slider({
 
   const prevPicture = () => {
     if (pictureIndex <= 0) {
-      setPictureIndex(images.length - 1); // "images.length - 1" is the last picture in a row
+      setPictureIndex(items.length - 1); // "items.length - 1" is the last picture in a row
       return;
     }
 
@@ -181,14 +198,17 @@ function Slider({
       {/* we have declared "visible in the stiles above" */}
       {/* that's how info container apperas or dissapears */}
       <MediaContainer>
-        <Button onClick={prevPicture}>
-          <GreyArrowLeft />
-        </Button>
-        {/* This part is also important, show image based on pictureIndex */}
-        <BigPicPreview image={images[pictureIndex]} />
-        <Button onClick={nextPicture}>
-          <GreyArrowRight />
-        </Button>
+        {items.length > 1 && (
+          <Button onClick={prevPicture}>
+            <GreyArrowLeft />
+          </Button>
+        )}
+        <ItemContainer>{getComponent(items[pictureIndex])}</ItemContainer>
+        {items.length > 1 && (
+          <Button onClick={nextPicture}>
+            <GreyArrowRight />
+          </Button>
+        )}
       </MediaContainer>
       <MobileGameHeader>
         <H3>{mobileTitle}</H3>

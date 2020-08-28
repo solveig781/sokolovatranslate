@@ -57,6 +57,13 @@ const AbsoluteSvg = styled.svg`
   bottom: 0;
 `;
 
+const StyledCharacter = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+`;
+
 function openLinkedIn() {
   window.open('https://www.linkedin.com/in/sasha-sokolova-7aa70a177/');
 }
@@ -77,10 +84,10 @@ export default function BottomBar() {
               title: 'Email copied',
               content: <span>Hooray!</span>,
             });
-            copy('hisasha781@gmail.com');
+            copy('sasha.skl812@gmail.com');
           }}
         >
-          hisasha781@gmail.com
+          sasha.skl812@gmail.com
         </Button>
 
         <Button onClick={openFacebook}>facebook</Button>
@@ -99,6 +106,10 @@ export default function BottomBar() {
           fill="#EACD9E"
         />
       </AbsoluteSvg>
+
+      <StyledCharacter>
+        <img width="47" height="77" alt="Game character" src="girl.png" />
+      </StyledCharacter>
     </Footer>
   );
 }

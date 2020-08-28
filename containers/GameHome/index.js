@@ -76,7 +76,7 @@ const CharacterBox = styled(Row)`
 const SpeechBalloon = styled.div`
   position: relative;
   bottom: 35%;
-  right: 20%;
+  right: 10%;
 
   @media (max-width: 630px) {
     bottom: 40%;
@@ -85,7 +85,7 @@ const SpeechBalloon = styled.div`
 
   @media (max-width: 610px) {
     transform: scale(0.9, 0.9);
-    right: 25%;
+    right: 10%;
   }
 
   @media (max-width: 570px) {
@@ -99,15 +99,15 @@ const SpeechBalloon = styled.div`
     right: 90%;
   }
 
-  @media (max-width: 390px) {
+  @media (max-width: 420px) {
     transform: scale(0.4, 0.4);
 
-    right: 115%;
+    right: 90%;
     bottom: 15%;
   }
 
   @media (min-width: 320px) and (max-width: 342px) {
-    right: 150%;
+    right: 135%;
     bottom: 5%;
   }
 `;
@@ -218,10 +218,10 @@ function Gamehome() {
                 title: 'Email copied',
                 content: <span>Hooray!</span>,
               });
-              copy('hisasha781@gmail.com');
+              copy('sasha.skl812@gmail.com');
             }}
           >
-            hisasha781@gmail.com
+            sasha.skl812@gmail.com
           </Button>
           <Button onClick={openFacebook}>facebook</Button>
           <Button onClick={openLinkedIn}>linkedin</Button>

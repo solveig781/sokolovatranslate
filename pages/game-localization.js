@@ -6,6 +6,8 @@ import Gamehome from 'containers/GameHome';
 import GameLanding from 'containers/GameLanding';
 import LastGameLanding from 'containers/LastGameLanding';
 
+import CharacterDialogue from 'containers/character-dialogue';
+
 function Index() {
   return (
     <>
@@ -16,7 +18,7 @@ function Index() {
         <GameLanding
           title="Party Arena"
           developer="Funture Games"
-          images={['preview1.png', 'preview2.png']}
+          items={['dialogueonlycharacters.svg', <CharacterDialogue />]}
           mobileTitle="Party Arena"
           mobileDeveloper="Funture Games"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -28,7 +30,7 @@ function Index() {
           background="#550C67"
           title="Some card shit"
           developer="Bombay Play"
-          images={['preview1.png', 'preview2.png']}
+          items={['menupic.png', 'preview2.png']}
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua"
         />
@@ -40,7 +42,7 @@ function Index() {
           developer="Bombay Play"
           mobileTitle="Party Arena"
           mobileDeveloper="Funture Games"
-          images={['preview1.png', 'preview2.png']}
+          items={['lorepic.png', 'preview2.png']}
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua"
         />

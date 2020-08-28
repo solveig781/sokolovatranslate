@@ -74,7 +74,7 @@ const SliderRow = styled(Row)`
 `;
 
 function LastGameLanding({
-  images,
+  items,
   title,
   developer,
   mobileTitle,
@@ -99,7 +99,7 @@ function LastGameLanding({
 
         <Slider
           className={isAtBottom && 'hide-description'}
-          images={images}
+          items={items}
           show={isVisible}
           mobileTitle={mobileTitle}
           mobileDeveloper={mobileDeveloper}

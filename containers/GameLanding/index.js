@@ -68,7 +68,7 @@ const VisibilityDiv = styled.div`
 `;
 
 function GameLanding({
-  images,
+  items,
   title,
   developer,
   mobileTitle,
@@ -90,7 +90,7 @@ function GameLanding({
       </TextContainer>
 
       <Slider
-        images={images}
+        items={items}
         show={isVisible}
         mobileTitle={mobileTitle}
         mobileDeveloper={mobileDeveloper}
