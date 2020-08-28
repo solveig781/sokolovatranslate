@@ -18,7 +18,7 @@ function Index() {
         <GameLanding
           title="Party Arena"
           developer="Funture Games"
-          items={['dialogueonlycharacters.svg', <CharacterDialogue />]}
+          items={[<CharacterDialogue />]}
           mobileTitle="Party Arena"
           mobileDeveloper="Funture Games"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

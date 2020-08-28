@@ -99,6 +99,7 @@ const BigPicPreview = styled.div`{
   background-position: 0 0;
   background-size: cover;
   image-rendering: pixelated;
+
   @media (max-width: 420px) {
     height: 95%;
     margin-top: 5%;
@@ -121,6 +122,7 @@ const MobileGameHeader = styled(Col)`
     font-size: 28px;
     margin-bottom: 0;
   }
+
   ${Button} {
     background: none;
     padding: 10px;
@@ -139,12 +141,19 @@ const MobileGameHeader = styled(Col)`
   }
 `;
 
-const ItemContainer = styled(Col)`
-  width: 100%;
-  height: 100%;
+const ItemContainer = styled(Row)`
+  flex-grow: 1;
+  padding: 20px;
+
+  /* 
+    Make sure we don't overflow by padding 
+    Height 100% plz but also remove the padding space
+  */
+  height: calc(100% - 5%);
 
   align-items: center;
   justify-content: center;
+  border: 1px solid black;
 `;
 
 function getComponent(componentItem) {
@@ -153,7 +162,7 @@ function getComponent(componentItem) {
     return <BigPicPreview image={componentItem} />;
   }
 
-  return componentItem;
+  return <ItemContainer>{componentItem}</ItemContainer>;
 }
 
 function Slider({
@@ -203,7 +212,7 @@ function Slider({
             <GreyArrowLeft />
           </Button>
         )}
-        <ItemContainer>{getComponent(items[pictureIndex])}</ItemContainer>
+        {getComponent(items[pictureIndex])}
         {items.length > 1 && (
           <Button onClick={nextPicture}>
             <GreyArrowRight />
