@@ -143,7 +143,6 @@ const MobileGameHeader = styled(Col)`
 
 const ItemContainer = styled(Row)`
   flex-grow: 1;
-  padding: 20px;
 
   /* 
     Make sure we don't overflow by padding 
@@ -153,7 +152,6 @@ const ItemContainer = styled(Row)`
 
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
 `;
 
 function getComponent(componentItem) {
