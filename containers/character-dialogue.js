@@ -1,16 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Row, Col, S6, S5 } from 'components';
+import { Row, Col, S5 } from 'components';
+
+import SpeechBalloon from 'components/speech-balloon';
 
 const Container = styled(Col)`
   justify-content: space-between;
   flex-grow: 1;
   height: 100%;
-`;
-
-const TopRow = styled(Row)`
-  justify-content: space-between;
-  flex-grow: 1;
+  border: 2px solid red;
 `;
 
 const FoxBox = styled(Col)`
@@ -18,31 +16,10 @@ const FoxBox = styled(Col)`
   align-items: flex-end;
   padding-left: 15%;
   padding-top: 10%;
-`;
 
-const TopSpeech = styled(Col)`
-  flex-grow: 1;
-  position: relative;
-
-  ${S6} {
-    position: absolute;
-    width: 50%;
-    top: 24%;
-    left: 6%;
-
-    color: black;
-    font-family: 'Press Start 2P';
-    line-height: 15px;
+  @media (min-width: 320px) and (max-width: 500px) {
+    padding-left: 10%;
   }
-
-  > svg {
-    top: 25%;
-  }
-`;
-
-const BottomRow = styled(Row)`
-  justify-content: space-between;
-  flex-grow: 1;
 `;
 
 const ChamBox = styled(Col)`
@@ -53,64 +30,36 @@ const ChamBox = styled(Col)`
   padding-bottom: 5%;
 `;
 
-const BottomSpeech = styled(Col)`
-  position: relative;
-  align-items: flex-end;
-  justify-content: flex-start;
-  flex-grow: 1;
-
-  ${S5} {
-    position: absolute;
-    right: 5%;
-    top: 7%;
-    width: 40%;
-    color: black;
-    font-family: 'Press Start 2P';
-    line-height: 15px;
-  }
-
-  > svg {
-    position: relative;
-    left: 4%;
-  }
-`;
-
 const Filler = styled(Col)`
   height: 10%;
 `;
 
-const SpeechBalloonStyle = styled.svg`
-  position: relative;
+const BottomRow = styled(Row)`
+  justify-content: center;
+  flex-grow: 1;
+`;
 
-  /* Scale the balloon in custom way for different size texts */
-  transform: scale(${({ scaleX, scaleY }) => `${scaleX}, ${scaleY}`});
+const TopRow = styled(Row)`
+  /* justify-content: space-between; */
+  flex-grow: 1;
+`;
 
-  /* Make the bubbles a bit narrower when screen is small */
-  @media (max-width: 500px) {
-    transform: scale(${({ scaleX, scaleY }) => `${scaleX * 0.8}, ${scaleY}`});
+const TopBalloon = styled(SpeechBalloon)`
+  max-width: 240px;
+  margin-left: 10px;
+
+  @media (max-width: 600px) {
+    margin-left: 20px;
   }
 `;
 
-function SpeechBalloon({ scaleX = 1, scaleY = 1 }) {
-  return (
-    <SpeechBalloonStyle
-      width="351"
-      height="73"
-      viewBox="0 0 351 73"
-      scaleX={scaleX}
-      scaleY={scaleY}
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M35.649 0C31.2307 0 27.649 3.58172 27.649 8V40.7591L0 72.9363L48.1614 52.0338H343.001C347.419 52.0338 351.001 48.4521 351.001 44.0338V8C351.001 3.58172 347.419 0 343.001 0H35.649Z"
-        fill="#E9E5E5"
-      />
-    </SpeechBalloonStyle>
-  );
-}
+const BottomBalloon = styled(SpeechBalloon)`
+  max-width: 200px;
+
+  @media (max-width: 600px) {
+    margin-left: 20px;
+  }
+`;
 
 function CharacterDialogue() {
   return (
@@ -119,21 +68,21 @@ function CharacterDialogue() {
         <FoxBox>
           <img width="135" height="125" alt="Game character" src="Fox.png" />
         </FoxBox>
-        <TopSpeech>
-          <SpeechBalloon scaleY={1.5} />
-          <S6>
-            I need you to do something for me. You see, my crops should be
-            harvested and I am just too lazy myself!
-          </S6>
-        </TopSpeech>
+        <TopBalloon
+          scaleX={0.8}
+          scaleY={2}
+          text="You see, my crops should be harvested and I am just too lazy myself!"
+        />
       </TopRow>
       <Filler />
 
       <BottomRow>
-        <BottomSpeech>
-          <SpeechBalloon scaleX={-0.8} />
-          <S5>Поговорим об оплате.</S5>
-        </BottomSpeech>
+        <BottomBalloon
+          mirror
+          scaleY={2}
+          scaleX={0.8}
+          text="Поговорим об оплате."
+        />
         <ChamBox>
           <img
             width="125"
