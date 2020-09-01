@@ -10,11 +10,15 @@ import GreyArrowRight from './greyarrowright';
 
 const BigText = styled(S3)`
   margin: 10%;
-  margin-top: 2%;
+  margin-top: 7%;
   line-height: 30px;
 
   font-size: 20px;
   font-family: Lato;
+
+  @media (max-width: 768px) {
+    margin-top: 3%;
+  }
 
   @media (max-width: 420px) {
     font-size: 16px;
@@ -143,7 +147,7 @@ const MobileGameHeader = styled(Col)`
 
 const ItemContainer = styled(Row)`
   flex-grow: 1;
-
+  padding-top: 8%;
   /* 
     Make sure we don't overflow by padding 
     Height 100% plz but also remove the padding space

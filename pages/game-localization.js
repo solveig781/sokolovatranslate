@@ -7,6 +7,7 @@ import GameLanding from 'containers/GameLanding';
 import LastGameLanding from 'containers/LastGameLanding';
 
 import CharacterDialogue from 'containers/character-dialogue';
+import GameMenu from 'containers/game-menu';
 
 function Index() {
   return (
@@ -16,8 +17,8 @@ function Index() {
       </Page>
       <Page fullHeight>
         <GameLanding
-          title="Party Arena"
-          developer="Funture Games"
+          title="Dialogue Translation"
+          developer=""
           items={[<CharacterDialogue />]}
           mobileTitle="Party Arena"
           mobileDeveloper="Funture Games"
@@ -28,9 +29,10 @@ function Index() {
       <Page fullHeight>
         <GameLanding
           background="#550C67"
-          title="Some card shit"
-          developer="Bombay Play"
-          items={['menupic.png', 'preview2.png']}
+          title="UI Interface"
+          developer=""
+          items={[<GameMenu />]}
+          mobileTitle="UI Interface"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua"
         />

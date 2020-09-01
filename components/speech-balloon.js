@@ -9,11 +9,6 @@ const Container = styled(Col)`
   justify-content: flex-start;
 
   flex-grow: 1;
-
-  @media (max-width: 400px) {
-    flex-grow: 1;
-    min-width: 0;
-  }
 `;
 
 const Text = styled(S5)`
@@ -24,9 +19,15 @@ const Text = styled(S5)`
   padding: 20px;
   border-radius: 10px;
   font-family: 'Press Start 2P';
+  line-height: 15px;
 
-  @media (max-width: 400px) {
-    padding: 5px;
+  @media (max-width: 460px) {
+    font-size: 10px;
+    padding: 15px;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 9px;
   }
 `;
 
@@ -48,6 +49,9 @@ const Bachok = styled.svg`
   position: relative;
 
   ${chooseSide}
+
+ 
+  }
 `;
 
 function SpeechBalloon({ text = '', mirror = false, className }) {
@@ -61,7 +65,7 @@ function SpeechBalloon({ text = '', mirror = false, className }) {
         mirror={mirror}
         width={width}
         height={height}
-        viewBox="15 25 100 100"
+        viewBox="10 25 100 100"
       >
         <path
           d="M17.5044 99.6043L60.8194 23.1105L105.087 23.1109L17.5044 99.6043Z"

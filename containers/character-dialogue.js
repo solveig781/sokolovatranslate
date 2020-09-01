@@ -8,26 +8,48 @@ const Container = styled(Col)`
   justify-content: space-between;
   flex-grow: 1;
   height: 100%;
-  border: 2px solid red;
+`;
+const TopRow = styled(Row)`
+  /* justify-content: space-between; */
+  flex-grow: 1;
 `;
 
 const FoxBox = styled(Col)`
   justify-content: flex-end;
   align-items: flex-end;
   padding-left: 15%;
-  padding-top: 10%;
+  padding-top: 7%;
 
-  @media (min-width: 320px) and (max-width: 500px) {
-    padding-left: 10%;
+  @media (max-width: 530px) {
+    padding-left: 5%;
+  }
+
+  > img {
+    @media (max-width: 360px) {
+      transform: scale(0.9, 0.9);
+    }
   }
 `;
 
-const ChamBox = styled(Col)`
-  justify-content: flex-end;
-  align-items: flex-end;
+const TopBalloon = styled(SpeechBalloon)`
+  max-width: 40%;
+  margin-left: 10px;
+  padding-top: 2%;
 
-  padding-right: 15%;
-  padding-bottom: 5%;
+  @media (max-width: 600px) {
+    margin-left: 20px;
+  }
+
+  @media (max-width: 460px) {
+    max-width: 50%;
+    margin-left: 10px;
+  }
+
+  @media (max-width: 360px) {
+    margin-right: 10px;
+    margin-left: 0;
+    max-width: 55%;
+  }
 `;
 
 const Filler = styled(Col)`
@@ -35,29 +57,51 @@ const Filler = styled(Col)`
 `;
 
 const BottomRow = styled(Row)`
-  justify-content: center;
+  justify-content: flex-end;
   flex-grow: 1;
 `;
 
-const TopRow = styled(Row)`
-  /* justify-content: space-between; */
-  flex-grow: 1;
-`;
+const ChamBox = styled(Col)`
+  justify-content: flex-end;
+  align-items: flex-end;
 
-const TopBalloon = styled(SpeechBalloon)`
-  max-width: 240px;
-  margin-left: 10px;
+  padding-bottom: 2%;
+  padding-right: 20%;
 
-  @media (max-width: 600px) {
-    margin-left: 20px;
+  @media (max-width: 530px) {
+    padding-right: 5%;
+  }
+
+  > img {
+    @media (max-width: 360px) {
+      transform: scale(0.9, 0.9);
+    }
   }
 `;
 
 const BottomBalloon = styled(SpeechBalloon)`
-  max-width: 200px;
+  max-width: 30%;
+  margin-right: 10px;
+
+  > span {
+    padding-right: 0;
+
+    @media (max-width: 380px) {
+      padding-right: 10px;
+    }
+  }
+
+  @media (max-width: 850px) {
+    margin-right: 20px;
+  }
 
   @media (max-width: 600px) {
     margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  @media (max-width: 380px) {
+    max-width: 40%;
   }
 `;
 
@@ -79,8 +123,8 @@ function CharacterDialogue() {
       <BottomRow>
         <BottomBalloon
           mirror
-          scaleY={2}
           scaleX={0.8}
+          scaleY={2}
           text="Поговорим об оплате."
         />
         <ChamBox>
