@@ -8,6 +8,7 @@ import LastGameLanding from 'containers/LastGameLanding';
 
 import CharacterDialogue from 'containers/character-dialogue';
 import GameMenu from 'containers/game-menu';
+import Lore from 'containers/lore';
 
 function Index() {
   return (
@@ -40,11 +41,11 @@ function Index() {
       <Page fullHeight>
         <LastGameLanding
           background="#26536C"
-          title="Last Game Here"
-          developer="Bombay Play"
-          mobileTitle="Party Arena"
-          mobileDeveloper="Funture Games"
-          items={['lorepic.png', 'preview2.png']}
+          title="Lore Translation"
+          developer=""
+          mobileTitle="Lore Translation"
+          mobileDeveloper=""
+          items={[<Lore />]}
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua"
         />

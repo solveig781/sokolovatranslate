@@ -6,7 +6,8 @@ const Container = styled(Col)`
   align-items: center;
   justify-content: space-around;
   flex-grow: 1;
-  padding: 10%;
+  padding: 5%;
+  padding-top: 8%;
 
   @media (max-width: 768px) {
     padding: 0;
@@ -32,7 +33,9 @@ const Box = styled(S5)`
   color: black !important;
   min-width: 270px;
 
-  margin: 2%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+
   padding: 15px;
   padding-left: 20px;
   background: #e1e1e1;
@@ -54,15 +57,50 @@ const Box = styled(S5)`
 }
 `;
 
+const BoxesCol = styled(Col)`
+  position: relative;
+  padding-bottom: 5%;
+  align-items: flex-end;
+`;
+
+const BoxesAndImage = styled(Row)`
+  position: relative;
+  align-items: flex-end;
+  width: 100%;
+  justify-content: center;
+`;
+const FoxBox = styled(Row)`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  align-self: flex-end;
+
+  > img {
+    @media (max-width: 520px) {
+      transform: scale(0.3, 0.3);
+      position: absolute;
+      bottom: -5px;
+      right: 0;
+    }
+  }
+`;
+
 function GameMenu() {
   return (
     <Container>
       <Header>Your Awesome Game</Header>
-      <Box>New Game/Новая игра</Box>
-      <Box>Load Game/Загрузить</Box>
-      <Box>Settings/Настройки</Box>
-      <Box>Online/Онлайн</Box>
-      <Box>Quit/Выход</Box>
+      <BoxesAndImage>
+        <BoxesCol>
+          <Box>New Game/Новая игра</Box>
+          <Box>Load Game/Загрузить</Box>
+          <Box>Settings/Настройки</Box>
+          <Box>Online/Онлайн</Box>
+          <Box>Quit/Выход</Box>
+        </BoxesCol>
+        <FoxBox>
+          <img width="115" height="105" alt="Game character" src="Fox.png" />
+        </FoxBox>
+      </BoxesAndImage>
     </Container>
   );
 }

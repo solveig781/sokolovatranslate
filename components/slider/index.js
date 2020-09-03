@@ -147,7 +147,7 @@ const MobileGameHeader = styled(Col)`
 
 const ItemContainer = styled(Row)`
   flex-grow: 1;
-  padding-top: 8%;
+
   /* 
     Make sure we don't overflow by padding 
     Height 100% plz but also remove the padding space
