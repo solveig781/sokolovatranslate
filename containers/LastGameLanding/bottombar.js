@@ -5,30 +5,44 @@ import copy from 'copy-to-clipboard';
 import { useIsAtBottom } from 'hooks';
 import { Col, Row, Button, Toasts } from 'components';
 
-const Footer = styled(Col)`
+import SpeechBalloon from 'components/speech-balloon';
+
+const Footer = styled(Row)`
   position: absolute;
+  justify-content: space-between;
+
   width: 100%;
   bottom: 0;
 
   transition: 0.5s all ease;
 
+  border: 2px solid black;
+
   &.invisible {
     bottom: -30vh;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: row-reverse;
   }
 `;
 
 const FooterButtonRow = styled(Row)`
   position: relative;
-  left: 5%;
-  margin-bottom: 1.3%;
+  padding: 0;
+
+  margin: 2%;
+  margin-right: 5%;
   width: 40%;
   z-index: 10;
   justify-content: space-between;
-  min-height: 40px;
+
+  border: 2px solid blue;
 
   @media (max-width: 768px) {
     width: 90%;
-    margin-bottom: 8%;
+    margin: 5%;
+    margin-top: 7%;
   }
 
   > ${Button} {
@@ -46,22 +60,42 @@ const FooterButtonRow = styled(Row)`
       border-bottom: 5px solid #515151;
     }
 
-    @media (max-width: 370px) {
+    @media (max-width: 450px) {
       font-size: 13px;
     }
+  }
+`;
+
+const CharacterBox = styled(Row)`
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1;
+  margin-left: 5%;
+
+  border: 2px solid red;
+
+  @media (max-width: 768px) {
+    width: 0;
+    opacity: 0;
+  }
+`;
+
+const StyledCharacter = styled.div`
+  bottom: 5px;
+  left: 5%;
+  margin: 0;
+`;
+
+const BottomSpeech = styled(SpeechBalloon)`
+  > span {
+    font-size: 10px;
+    padding: 10px;
   }
 `;
 
 const AbsoluteSvg = styled.svg`
   position: absolute;
   bottom: 0;
-`;
-
-const StyledCharacter = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 0;
 `;
 
 function openLinkedIn() {
@@ -77,6 +111,13 @@ export default function BottomBar() {
 
   return (
     <Footer className={!isAtBottom && 'invisible'}>
+      <CharacterBox>
+        <StyledCharacter>
+          <img width="70" height="73" alt="Game character" src="Fox.png" />
+        </StyledCharacter>
+        <BottomSpeech scaleX={0.5} scaleY={0.1} text="And more!" />
+      </CharacterBox>
+
       <FooterButtonRow>
         <Button
           onClick={() => {
@@ -106,10 +147,6 @@ export default function BottomBar() {
           fill="#EACD9E"
         />
       </AbsoluteSvg>
-
-      <StyledCharacter>
-        <img width="47" height="77" alt="Game character" src="girl.png" />
-      </StyledCharacter>
     </Footer>
   );
 }

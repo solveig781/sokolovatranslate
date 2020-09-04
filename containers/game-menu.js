@@ -32,6 +32,7 @@ const Box = styled(S5)`
   font-family: 'Press Start 2P';
   color: black !important;
   min-width: 270px;
+  user-select: none;
 
   margin-top: 4%;
   margin-bottom: 4%;

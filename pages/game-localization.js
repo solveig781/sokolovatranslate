@@ -21,8 +21,8 @@ function Index() {
           title="Dialogue Translation"
           developer=""
           items={[<CharacterDialogue />]}
-          mobileTitle="Party Arena"
-          mobileDeveloper="Funture Games"
+          mobileTitle="Dialogue Translation"
+          mobileDeveloper=""
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua"
         />

@@ -201,7 +201,7 @@ function Gamehome() {
         <div />
         <CharacterBox>
           <StyledCharacter>
-            <img width="163" height="135" alt="Game character" src="Fox.png" />
+            <img width="153" height="135" alt="Game character" src="Fox.png" />
           </StyledCharacter>
           <SpeechBalloon>
             <Speech>
