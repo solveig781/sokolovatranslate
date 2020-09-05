@@ -73,6 +73,14 @@ const SliderRow = styled(Row)`
   flex-grow: 1;
 `;
 
+const LastSlider = styled(Slider)`
+  transition: 0.8s all ease;
+
+  &.at-end {
+    height: 90%;
+  }
+`;
+
 function LastGameLanding({
   items,
   title,
@@ -97,8 +105,8 @@ function LastGameLanding({
           </GameHeader>
         </TextContainer>
 
-        <Slider
-          className={isAtBottom && 'hide-description'}
+        <LastSlider
+          className={isAtBottom && 'at-end'}
           items={items}
           show={isVisible}
           mobileTitle={mobileTitle}
