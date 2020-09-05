@@ -21,7 +21,7 @@ function Index() {
           title="Dialogue Translation"
           developer=""
           items={[<CharacterDialogue />]}
-          mobileTitle="Dialogue Translation"
+          mobileTitle="Dialogue Translation "
           mobileDeveloper=""
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua"
