@@ -1,9 +1,11 @@
+/* global window */
+
 import React from 'react';
 import styled from 'styled-components';
 import copy from 'copy-to-clipboard';
 
 import { useIsAtBottom } from 'hooks';
-import { Col, Row, Button, Toasts } from 'components';
+import { Row, Button, Toasts } from 'components';
 
 import SpeechBalloon from 'components/speech-balloon';
 
@@ -52,7 +54,7 @@ const FooterButtonRow = styled(Row)`
 
     border-bottom: 0;
     text-transform: none;
-    font-family: Roboto;
+    font-family: sans-serif;
 
     &:hover {
       color: #515151;
@@ -87,6 +89,9 @@ const StyledCharacter = styled.div`
 `;
 
 const BottomSpeech = styled(SpeechBalloon)`
+  position: relative;
+  top: -40px;
+
   > span {
     font-size: 10px;
     padding: 10px;
@@ -115,7 +120,12 @@ export default function BottomBar() {
         <StyledCharacter>
           <img width="70" height="73" alt="Game character" src="Fox.png" />
         </StyledCharacter>
-        <BottomSpeech scaleX={0.5} scaleY={0.1} text="And more!" />
+        <BottomSpeech
+          scaleX={0.5}
+          scaleY={0.1}
+          bachokHeight={0.5}
+          text="And more!"
+        />
       </CharacterBox>
 
       <FooterButtonRow>
@@ -125,10 +135,10 @@ export default function BottomBar() {
               title: 'Email copied',
               content: <span>Hooray!</span>,
             });
-            copy('sasha.skl812@gmail.com');
+            copy('sokolova.translate@gmail.com');
           }}
         >
-          sasha.skl812@gmail.com
+          <b>sokolova.translate@gmail.com</b>
         </Button>
 
         <Button onClick={openFacebook}>facebook</Button>

@@ -67,7 +67,7 @@ const MediaContainer = styled(Row)`
   justify-content: space-around;
   align-items: center;
 
-  svg {
+  > svg {
     margin: 0;
 
     @media (max-width: 420px) {
