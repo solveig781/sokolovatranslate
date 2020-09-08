@@ -6,7 +6,7 @@ import copy from 'copy-to-clipboard';
 
 import { Col, Row, H1, H3, S2, Button, Toasts } from 'components';
 
-import SpeechBalloonIcon from './speechballoon';
+import SpeechBalloon from 'components/speech-balloon';
 
 const HomePage = styled(Col)`
   width: 100%;
@@ -54,74 +54,10 @@ const Header = styled(Col)`
   }
 `;
 
-const LeftContainer = styled(Col)`
-  height: 100%;
-  justify-content: space-between;
-  margin-left: 5%;
-
-  @media (min-width: 768px) {
-    max-width: 40%;
-  }
-
-  @media (max-width: 768px) {
-    flex-grow: 1;
-    margin-right: 5%;
-  }
-`;
 const CharacterBox = styled(Row)`
   align-items: center;
 
-  width: 50%;
   height: 50%;
-`;
-
-const SpeechBalloon = styled.div`
-  position: relative;
-  bottom: 35%;
-  right: 10%;
-
-  @media (max-width: 630px) {
-    bottom: 40%;
-    right: 18%;
-  }
-
-  @media (max-width: 610px) {
-    right: 10%;
-  }
-
-  @media (max-width: 570px) {
-    right: 40%;
-    bottom: 30%;
-  }
-
-  @media (max-width: 500px) {
-    right: 90%;
-  }
-
-  @media (max-width: 420px) {
-    right: 90%;
-    bottom: 15%;
-  }
-
-  @media (min-width: 320px) and (max-width: 342px) {
-    right: 135%;
-    bottom: 5%;
-  }
-`;
-
-const Speech = styled(Col)`
-  position: absolute;
-  width: 80%;
-  right: 8%;
-  top: 10%;
-
-  line-height: 25px;
-
-  ${S2} {
-    color: black;
-    font-size: 16px;
-    font-family: 'Press Start 2P';
-  }
 `;
 
 const StyledCharacter = styled.div`
@@ -162,6 +98,7 @@ const FooterButtonRow = styled(Row)`
   > ${Button} {
     font-size: 16px;
     padding: 0;
+    margin-right: 40px;
 
     border-bottom: 0;
     text-transform: none;
@@ -173,9 +110,41 @@ const FooterButtonRow = styled(Row)`
       border-bottom: 5px solid white;
     }
 
-    @media (max-width: 340px) {
+    @media (max-width: 460px) {
       font-size: 13px;
+      margin-right: 0px;
     }
+  }
+`;
+
+const LeftContainer = styled(Col)`
+  height: 100%;
+  justify-content: space-between;
+  margin-left: 5%;
+
+  @media (min-width: 768px) {
+    ${FooterButtonRow} {
+      max-width: 40%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-grow: 1;
+    margin-right: 5%;
+  }
+`;
+
+const MainBalloon = styled(SpeechBalloon)`
+  position: relative;
+  top: -65px;
+
+  @media (min-width: 768px) {
+    max-width: 400px;
+  }
+
+  @media (max-width: 342px) {
+    left: -50px;
+    min-width: 170px;
   }
 `;
 
@@ -195,18 +164,17 @@ function Gamehome() {
         <H3>Your game speaks Russian</H3>
       </Header>
       <LeftContainer>
+        {/* align character to center with the empty div */}
         <div />
         <CharacterBox>
           <StyledCharacter>
             <img width="153" height="135" alt="Game character" src="Fox.png" />
           </StyledCharacter>
-          <SpeechBalloon>
-            <Speech>
-              <S2>Привет!</S2>
-              <S2>Я говорю по-русски :)</S2>
-            </Speech>
-            <SpeechBalloonIcon />
-          </SpeechBalloon>
+          <MainBalloon
+            scaleX={200}
+            scaleY={1}
+            text="You see, my crops should be harvested and I am just too lazy myself!"
+          />
         </CharacterBox>
         <FooterButtonRow>
           <Button
