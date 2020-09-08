@@ -78,6 +78,12 @@ const LastSlider = styled(Slider)`
 
   &.at-end {
     height: 90%;
+
+    @media (max-height: 568px) {
+      > span {
+        opacity: 0;
+      }
+    }
   }
 `;
 

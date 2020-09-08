@@ -43,6 +43,16 @@ const FooterButtonRow = styled(Row)`
     margin-top: 7%;
   }
 
+  @media (max-height: 568px), (max-width: 400px) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin: 4px;
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }
+
   > ${Button} {
     font-size: 16px;
     padding: 0;
@@ -132,7 +142,7 @@ export default function BottomBar() {
             copy('sokolova.translate@gmail.com');
           }}
         >
-          <b>sokolova.translate@gmail.com</b>
+          sokolova.translate@gmail.com
         </Button>
 
         <Button onClick={openFacebook}>facebook</Button>
