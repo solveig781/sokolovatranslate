@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import copy from 'copy-to-clipboard';
 
 import { useIsAtBottom } from 'hooks';
-import { Col, Row, Button, Toasts } from 'components';
+import { Row, Button, Toasts } from 'components';
 
 import SpeechBalloon from 'components/speech-balloon';
 
@@ -15,8 +15,6 @@ const Footer = styled(Row)`
   bottom: 0;
 
   transition: 0.5s all ease;
-
-  border: 2px solid black;
 
   &.invisible {
     bottom: -30vh;
@@ -36,8 +34,6 @@ const FooterButtonRow = styled(Row)`
   width: 40%;
   z-index: 10;
   justify-content: space-between;
-
-  border: 2px solid blue;
 
   @media (max-width: 768px) {
     width: 90%;
@@ -71,8 +67,6 @@ const CharacterBox = styled(Row)`
   align-items: flex-end;
   z-index: 1;
   margin-left: 5%;
-
-  border: 2px solid red;
 
   @media (max-width: 768px) {
     width: 0;
