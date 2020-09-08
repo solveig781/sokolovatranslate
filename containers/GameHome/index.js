@@ -1,3 +1,5 @@
+/* global window */
+
 import React from 'react';
 import styled from 'styled-components';
 import copy from 'copy-to-clipboard';
@@ -84,24 +86,19 @@ const SpeechBalloon = styled.div`
   }
 
   @media (max-width: 610px) {
-    transform: scale(0.9, 0.9);
     right: 10%;
   }
 
   @media (max-width: 570px) {
-    transform: scale(0.7, 0.7);
     right: 40%;
     bottom: 30%;
   }
 
   @media (max-width: 500px) {
-    transform: scale(0.5, 0.5);
     right: 90%;
   }
 
   @media (max-width: 420px) {
-    transform: scale(0.4, 0.4);
-
     right: 90%;
     bottom: 15%;
   }
@@ -218,10 +215,10 @@ function Gamehome() {
                 title: 'Email copied',
                 content: <span>Hooray!</span>,
               });
-              copy('sasha.skl812@gmail.com');
+              copy('sokolova.translate@gmail.com');
             }}
           >
-            sasha.skl812@gmail.com
+            sokolova.translate@gmail.com
           </Button>
           <Button onClick={openFacebook}>facebook</Button>
           <Button onClick={openLinkedIn}>linkedin</Button>

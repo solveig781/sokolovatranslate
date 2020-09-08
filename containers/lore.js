@@ -127,11 +127,11 @@ function Lore() {
     <Container>
       <Text>
         <S6>
-          Legends say, by the Forgotten Lake shores on the full moon only there
-          grows a mysterious flower with just two petals. White one can heal any
-          wound and the red one will carry you out from the most hopeless
-          battle. But it comes with a price. Those who have ever picked it, were
-          known to forget who they were...
+          Legends say, on the shores of the Forgotten Lake, at full moon, there
+          grows a mysterious flower with two lonely petals. The White will heal
+          any wound, the red will carry you from the most hopeless battle.
+          However, the price is rumoured high, Those who have sought and picked,
+          were known to soon forget themselves...
         </S6>
         <svg
           width="329"
