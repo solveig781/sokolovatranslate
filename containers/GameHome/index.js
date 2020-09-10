@@ -171,9 +171,9 @@ function Gamehome() {
             <img width="153" height="135" alt="Game character" src="Fox.png" />
           </StyledCharacter>
           <MainBalloon
-            scaleX={200}
+            scaleX={20}
             scaleY={1}
-            text="You see, my crops should be harvested and I am just too lazy myself!"
+            text="Привет! Я говорю по-русски! :)"
           />
         </CharacterBox>
         <FooterButtonRow>
