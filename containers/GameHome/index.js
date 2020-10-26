@@ -238,7 +238,7 @@ function Gamehome() {
             <img width="124" height="116" alt="Game character" src="Fox.png" />
           </StyledCharacter>
           <MainBalloon
-            scaleX={200}
+            scaleX={20}
             scaleY={1}
             text="Привет! Я говорю по-русски! :)"
           />

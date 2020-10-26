@@ -26,6 +26,15 @@ const Header = styled(H5)`
   @media (max-width: 380px) {
     font-size: 16px;
   }
+
+  @media (max-height: 768px) {
+    margin-top: 50px;
+  }
+
+  @media (max-height: 384px) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 `;
 
 const Box = styled(S5)`
@@ -70,6 +79,7 @@ const BoxesAndImage = styled(Row)`
   width: 100%;
   justify-content: center;
 `;
+
 const FoxBox = styled(Row)`
   position: absolute;
   bottom: 0;
