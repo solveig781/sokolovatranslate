@@ -12,22 +12,40 @@ const Level = styled(Col)`
   z-index: 0;
 `;
 
-const BigGreenBlob = styled.svg``;
+const BigGreenBlob = styled.svg`
+  position: absolute;
+  transform: rotate(-2.09deg);
+  transform: scale(0.8, 0.8);
+
+  top: -61%;
+  left: -44%;
+
+  @media (max-width: 768px) {
+    transform: scale(0.4, 0.4);
+    left: -86%;
+    top: -56%;
+  }
+
+  @media (max-width: 420px) {
+    top: -49%;
+    left: -170%;
+  }
+`;
 const MiddlePurpleBlob = styled.svg`
   position: absolute;
   top: 8%;
-  left: -5%;
+  left: 0%;
 
-  @media (max-width: 460px) {
+  @media (max-width: 768px) {
     opacity: 0;
   }
 `;
 const SmallPinkBlob = styled.svg`
   position: absolute;
   top: 26%;
-  left: 2%;
+  left: 8%;
 
-  @media (max-width: 460px) {
+  @media (max-width: 768px) {
     opacity: 0;
   }
 `;
@@ -36,31 +54,31 @@ function BlobsLevel() {
   return (
     <Level>
       <BigGreenBlob
-        width="966"
-        height="900"
-        viewBox="0 0 966 900"
+        width="1458"
+        height="1449"
+        viewBox="0 0 1458 1449"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g filter="url(#filter0_d)">
           <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M666.928 223.679C718.536 293.773 784.678 356.822 801.576 442.21C820.591 538.303 835.259 658.804 766.923 728.987C696.155 801.665 572.815 767.195 472.242 780.438C400.469 789.888 331.091 805.283 259.32 795.822C189.811 786.66 131.333 747.794 64.4762 726.685C-33.648 695.704 -162.893 722.781 -226.985 642.28C-288.013 565.628 -240.997 451.036 -232.715 353.408C-224.424 255.688 -258.101 126.475 -178.379 69.3565C-89.0501 5.35483 42.0603 119.843 145.409 82.4937C233.812 50.5456 243.789 -113.229 337.706 -117.151C426.627 -120.865 463.224 2.62587 525.056 66.638C574.917 118.257 624.377 165.886 666.928 223.679Z"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M1159.2 514.053C1210.8 584.147 1276.95 647.196 1293.84 732.584C1312.86 828.677 1327.53 949.178 1259.19 1019.36C1188.42 1092.04 1065.08 1057.57 964.51 1070.81C892.737 1080.26 823.36 1095.66 751.589 1086.2C682.08 1077.03 623.601 1038.17 556.745 1017.06C458.621 986.078 329.375 1013.15 265.283 932.654C204.256 856.002 251.271 741.41 259.554 643.782C267.844 546.062 234.168 416.849 313.889 359.73C403.218 295.729 534.329 410.217 637.677 372.868C726.081 340.92 736.057 177.145 829.975 173.223C918.896 169.509 955.493 293 1017.32 357.012C1067.19 408.631 1116.65 456.26 1159.2 514.053Z"
             fill="#3CC37C"
           />
         </g>
         <defs>
           <filter
             id="filter0_d"
-            x="-492.269"
-            y="-290.374"
+            x="0"
+            y="0"
             width="1457.54"
             height="1448.94"
             filterUnits="userSpaceOnUse"
-            colorInterpolation-filters="sRGB"
+            color-interpolation-filters="sRGB"
           >
-            <feFlood floodOpacity="0" result="BackgroundImageFix" />
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -109,7 +127,7 @@ function BlobsLevel() {
             width="553.452"
             height="598.249"
             filterUnits="userSpaceOnUse"
-            colorInterpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
             <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
@@ -121,7 +139,7 @@ function BlobsLevel() {
             <feGaussianBlur stdDeviation="15" />
             <feColorMatrix
               type="matrix"
-              values="0 0 0 0 0.45825 0 0 0 0 0.305365 0 0 0 0 0.5125 0 0 0 0.3 0"
+              values="0 0 0 0 0.314097 0 0 0 0 0.212917 0 0 0 0 0.35 0 0 0 0.3 0"
             />
             <feBlend
               mode="normal"
@@ -160,7 +178,7 @@ function BlobsLevel() {
             width="304.298"
             height="355.68"
             filterUnits="userSpaceOnUse"
-            colorInterpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
             <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
@@ -172,7 +190,7 @@ function BlobsLevel() {
             <feGaussianBlur stdDeviation="15" />
             <feColorMatrix
               type="matrix"
-              values="0 0 0 0 0.477791 0 0 0 0 0.375833 0 0 0 0 0.5125 0 0 0 0.2 0"
+              values="0 0 0 0 0.0693342 0 0 0 0 0.0649306 0 0 0 0 0.0708333 0 0 0 0.41 0"
             />
             <feBlend
               mode="normal"

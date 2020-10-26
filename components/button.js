@@ -22,7 +22,6 @@ function addDisabledEffect({ disabled }) {
 
 export default styled.button`
   border: none;
-  display: inline-block;
 
   padding: 40px;
 
@@ -39,10 +38,6 @@ export default styled.button`
 
   &:focus {
     outline: none;
-  }
-
-  > * {
-    margin-right: 10px;
   }
 
   ${addHoverEffect}
