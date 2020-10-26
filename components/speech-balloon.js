@@ -4,10 +4,8 @@ import styled from 'styled-components';
 import { Col, S5 } from 'components';
 
 const Text = styled(S5)`
-  color: black !important;
-  background: white;
   z-index: 1;
-
+  background: white;
   padding: 20px;
   border-radius: 10px;
   font-family: 'Press Start 2P';
@@ -73,7 +71,7 @@ function SpeechBalloon({
       >
         <path
           d="M17.5044 99.6043L60.8194 23.1105L105.087 23.1109L17.5044 99.6043Z"
-          fill="white"
+          fill="#766A6A"
         />
       </Bachok>
     </Container>
