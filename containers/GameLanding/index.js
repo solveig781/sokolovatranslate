@@ -8,7 +8,7 @@ import { Col, Row, H5, Button, Slider } from 'components';
 const HomePage = styled(Row)`
   width: 100%;
   height: 100%;
-  background: ${({ background }) => background};
+  background: ;
   justify-content: space-between;
 
   /* Small hack so we can put a div
@@ -18,7 +18,7 @@ const HomePage = styled(Row)`
   position: relative;
 
   span {
-    color: white;
+    color: #1e4832;
   }
 `;
 
@@ -26,6 +26,7 @@ const TextContainer = styled(Col)`
   position: relative;
   justify-content: center;
   flex-grow: 1;
+  color: #1e4832;
 
   @media (max-width: 768px) {
     display: none;
@@ -39,12 +40,16 @@ const GameHeader = styled(Col)`
   align-items: center;
   margin: 15px;
   letter-spacing: 0.05em;
+  z-index: 1;
 
   ${H5} {
     font-size: 40px;
+    z-index: 1;
   }
 
   ${Button} {
+    z-index: 1;
+
     background: none;
     padding: 10px;
     text-transform: none;
@@ -74,13 +79,12 @@ function GameLanding({
   mobileTitle,
   mobileDeveloper,
   description,
-  background = '#379683',
 }) {
   const nodeRef = useRef();
   const isVisible = useIsVisible(nodeRef);
 
   return (
-    <HomePage background={background}>
+    <HomePage>
       <VisibilityDiv ref={nodeRef} />
       <TextContainer>
         <GameHeader>

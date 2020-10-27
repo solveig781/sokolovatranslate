@@ -22,8 +22,6 @@ const Header = styled(Col)`
 
   margin-top: 2%;
 
-  border: 2px solid black;
-
   justify-content: space-between;
   z-index: 1;
 
@@ -31,13 +29,19 @@ const Header = styled(Col)`
     color: #1e4832;
   }
 
+  @media (max-width: 420px) {
+    margin-right: 18px;
+    margin-left: 18px;
+  }
+
   ${H1} {
     font-size: 40px;
     margin-bottom: 5px;
     font-family: Josefin Sans;
 
-    @media (max-width: 340px) {
-      font-size: 36px;
+    @media (max-width: 420px) {
+      font-size: 35px;
+      letter-spacing: 0.07em;
     }
   }
 
@@ -46,11 +50,16 @@ const Header = styled(Col)`
     margin-top: 5px;
     font-family: Lato;
 
-    @media (max-width: 430px) {
+    @media (max-width: 420px) {
       font-size: 26px;
+      margin-bottom: 10px;
+      margin-top: 0;
     }
 
-    @media (max-width: 340px) {
+    @media (max-width: 372px) {
+      font-size: 22px;
+    }
+    @media (max-width: 420px) {
       font-size: 23px;
     }
   }
@@ -62,6 +71,15 @@ const Header = styled(Col)`
 
     @media (max-width: 768px) {
       opacity: 1;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 14px;
+      max-width: 189px;
+      letter-spacing: 0.15em;
+    }
+    @media (max-width: 420px) {
+      max-width: 236px;
     }
   }
 `;
@@ -76,7 +94,6 @@ const MiddleRow = styled(Row)`
   z-index: 1;
 
   positon: relative;
-  border: 2px solid red;
 
   @media (max-width: 768px) {
     flex-grow: 1;
@@ -97,6 +114,7 @@ const CTAcontainer = styled(Col)`
     padding-left: 19%;
     max-width: 215px;
     text-align: right;
+    font-weight: 300;
 
     height: 57px;
     font-family: Roboto;
@@ -123,6 +141,7 @@ const CTAcontainer = styled(Col)`
     border-bottom: 0;
     text-transform: none;
     font-family: Roboto;
+    font-weight: bold;
 
     &:hover {
       box-shadow: inset 0px 0px 0px 4px #dc9ef2;
@@ -146,6 +165,10 @@ const CTAcontainer = styled(Col)`
       left: 0;
       right: 0;
     }
+
+    @media (max-width: 420px) {
+      margin-bottom: 11%;
+    }
   }
 `;
 
@@ -159,7 +182,6 @@ const FooterButtonRow = styled(Row)`
 
   z-index: 1;
 
-  border: 2px solid blue;
   justify-content: space-between;
 
   @media (max-width: 1000px) {
@@ -168,6 +190,10 @@ const FooterButtonRow = styled(Row)`
 
   @media (max-width: 590px) {
     width: 81%;
+  }
+  @media (max-width: 420px) {
+    margin-left: 18px;
+    width: 87%;
   }
 
   > ${Button} {
@@ -188,13 +214,16 @@ const FooterButtonRow = styled(Row)`
       font-size: 13px;
       margin-right: 0;
     }
+
+    @media (max-width: 320px) {
+      font-size: 12px;
+    }
   }
 `;
 
 const CharacterBox = styled(Row)`
   align-items: center;
 
-  border: 2px solid black;
   height: 100%;
   width: 60%;
 `;
@@ -205,15 +234,10 @@ const StyledCharacter = styled.div`
   paddng: 0;
   filter: drop-shadow(0px 10px 30px rgba(112, 63, 40, 0.55));
 
-  @media (max-width: 340px) {
-    top: 15%;
-  }
-
   @media (max-width: 390px) {
     transform: scale(0.9, 0.9);
 
     position: relative;
-    top: 10%;
   }
 
   @media (max-width: 342px) {
@@ -222,15 +246,27 @@ const StyledCharacter = styled.div`
     right: 10%;
     top: 20%;
   }
+  @media (max-width: 320px) {
+    top: -5%;
+  }
 `;
 
 const MainBalloon = styled(SpeechBalloon)`
   position: relative;
   top: -65px;
+  fill="#766A6A";
+
+  svg {
+    fill: #766A6A;
+  }
+
 
   span {
     color: white;
     background: #766a6a;
+    @media (max-width: 320px) {
+      padding: 10px;
+    }
   }
 
   @media (max-width: 870px) {
@@ -244,6 +280,20 @@ const MainBalloon = styled(SpeechBalloon)`
     top: 37%;
     right: 25%;
     max-width: 42%;
+  }
+  @media (max-width: 420px) {
+    max-width: 49%;
+    margin-right: -49px;
+  }
+
+  @media (max-width: 387px) {
+    max-width: 53%;
+  }
+
+  @media (max-width: 320px) {
+    top: 37%;
+    max-width: 35%;
+    right: 40%;
   }
 `;
 
@@ -287,6 +337,7 @@ function Gamehome() {
             scaleX={20}
             scaleY={1}
             text="Привет! Я говорю по-русски! :)"
+            fill="#766A6A"
           />
         </CharacterBox>
         <CTAcontainer>

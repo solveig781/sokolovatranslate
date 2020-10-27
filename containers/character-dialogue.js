@@ -8,7 +8,16 @@ const Container = styled(Col)`
   justify-content: space-between;
   flex-grow: 1;
   height: 100%;
+  z-index: 1;
 `;
+const GreenBlob = styled(Col)`
+  width:100%
+  height:100%;
+  position: absolute;
+  right:3%;
+  z-index: -1;
+`;
+
 const TopRow = styled(Row)`
   /* justify-content: space-between; */
   flex-grow: 1;
@@ -19,6 +28,7 @@ const FoxBox = styled(Col)`
   align-items: flex-end;
   padding-left: 15%;
   padding-top: 7%;
+  filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.25));
 
   @media (max-width: 530px) {
     padding-left: 5%;
@@ -67,6 +77,7 @@ const ChamBox = styled(Col)`
 
   padding-bottom: 2%;
   padding-right: 20%;
+  filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.25));
 
   @media (max-width: 530px) {
     padding-right: 5%;
@@ -82,7 +93,7 @@ const ChamBox = styled(Col)`
 const BottomBalloon = styled(SpeechBalloon)`
   max-width: 30%;
   margin-right: 10px;
-
+  filter: drop-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
   > span {
     padding-right: 0;
 
@@ -108,6 +119,9 @@ const BottomBalloon = styled(SpeechBalloon)`
 function CharacterDialogue() {
   return (
     <Container>
+      <GreenBlob>
+        <img width="554" height="512" alt="Blob" src="greenblob.png" />
+      </GreenBlob>
       <TopRow>
         <FoxBox>
           <img width="135" height="125" alt="Game character" src="Fox.png" />
@@ -119,7 +133,6 @@ function CharacterDialogue() {
         />
       </TopRow>
       <Filler />
-
       <BottomRow>
         <BottomBalloon
           mirror

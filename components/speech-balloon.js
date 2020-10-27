@@ -49,6 +49,7 @@ function SpeechBalloon({
   text = '',
   className = '',
   mirror = false,
+  fill = '#ffffff',
   bachokHeight = 1,
 }) {
   const width = 50;
@@ -71,7 +72,7 @@ function SpeechBalloon({
       >
         <path
           d="M17.5044 99.6043L60.8194 23.1105L105.087 23.1109L17.5044 99.6043Z"
-          fill="#766A6A"
+          fill={fill}
         />
       </Bachok>
     </Container>

@@ -13,11 +13,18 @@ const Container = styled(Col)`
     padding: 0;
   }
 `;
+const PurpleBlob = styled(Col)`
+  width:100%
+  height:100%;
+  position: absolute;
+`;
 
 const Header = styled(H5)`
   font-family: 'Press Start 2P';
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 7%;
+  z-index: 1;
+  color: white !important;
 
   @media (max-width: 510px) {
     font-size: 20px;
@@ -85,6 +92,7 @@ const FoxBox = styled(Row)`
   bottom: 0;
   right: 0;
   align-self: flex-end;
+  filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.25));
 
   > img {
     @media (max-width: 520px) {
@@ -99,6 +107,9 @@ const FoxBox = styled(Row)`
 function GameMenu() {
   return (
     <Container>
+      <PurpleBlob>
+        <img width="707" height="543" alt="Blob" src="purpleblob.png" />
+      </PurpleBlob>
       <Header>Your Awesome Game</Header>
       <BoxesAndImage>
         <BoxesCol>

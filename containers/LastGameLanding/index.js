@@ -10,7 +10,6 @@ import BottomBar from './bottombar';
 const HomePage = styled(Col)`
   width: 100%;
   height: 100%;
-  background: ${({ background }) => background};
   justify-content: space-between;
 
   /* Small hack so we can put a div
@@ -20,7 +19,7 @@ const HomePage = styled(Col)`
   position: relative;
 
   span {
-    color: white;
+    color: #1e4832;
   }
 `;
 
