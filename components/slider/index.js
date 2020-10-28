@@ -32,7 +32,6 @@ const InfoContainer = styled(Col)`
   width: 65%;
   height: 100%;
 
-  background: rgba(149, 149, 149, 0.2);
   position: relative;
   left: 100vw;
   opacity: 0;
@@ -126,6 +125,9 @@ const MobileGameHeader = styled(Col)`
   ${H3} {
     font-size: 28px;
     margin-bottom: 0;
+    @media (min-width: 450px) and (max-width: 500px) {
+      margin-top: 40px;
+    }
   }
 
   ${Button} {

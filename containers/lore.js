@@ -46,6 +46,10 @@ const BlueBlob = styled(Col)`
 const ScrollContainer = styled(Col)`
   z-index: 1;
   filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.25));
+  margin-left: auto;
+  margin-tight: auto;
+  left: 0;
+  right: 0;
 
   @media (max-width: 620px) {
     transform: scale(0.8, 1);
@@ -57,6 +61,12 @@ const ScrollContainer = styled(Col)`
 
   @media (max-width: 450px) {
     transform: scale(0.6, 1);
+  }
+  @media (max-width: 375px) {
+    transform: scale(0.55, 0.9);
+  }
+  @media (max-width: 340px) {
+    transform: scale(0.5, 0.9);
   }
 `;
 
@@ -100,10 +110,9 @@ const Text = styled(Col)`
   }
 
   @media (max-width: 375px) {
-    width: 28%;
-
-    top: 19%;
-    left: 38%;
+    width: 31%;
+    top: 15%;
+    left: 36%;
   }
 
   ${S6} {

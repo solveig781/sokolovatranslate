@@ -35,6 +35,7 @@ const FoxBox = styled(Col)`
   }
 
   > img {
+    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.3));
     @media (max-width: 360px) {
       transform: scale(0.9, 0.9);
     }
@@ -45,6 +46,11 @@ const TopBalloon = styled(SpeechBalloon)`
   max-width: 40%;
   margin-left: 10px;
   padding-top: 2%;
+
+  > span {
+    background-color: #766a6a;
+    color: white;
+  }
 
   @media (max-width: 600px) {
     margin-left: 20px;
@@ -77,13 +83,13 @@ const ChamBox = styled(Col)`
 
   padding-bottom: 2%;
   padding-right: 20%;
-  filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.25));
-
   @media (max-width: 530px) {
     padding-right: 5%;
   }
 
   > img {
+    filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.5));
+
     @media (max-width: 360px) {
       transform: scale(0.9, 0.9);
     }
@@ -94,8 +100,12 @@ const BottomBalloon = styled(SpeechBalloon)`
   max-width: 30%;
   margin-right: 10px;
   filter: drop-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+  
   > span {
     padding-right: 0;
+    background-color: #766a6a;
+    color: white;
+    }
 
     @media (max-width: 380px) {
       padding-right: 10px;

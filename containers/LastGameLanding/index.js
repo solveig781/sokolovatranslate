@@ -20,6 +20,10 @@ const HomePage = styled(Col)`
 
   span {
     color: #1e4832;
+
+    @media (max-width: 768px) {
+      color: #2b2b2b;
+    }
   }
 `;
 

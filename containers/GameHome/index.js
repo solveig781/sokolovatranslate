@@ -337,7 +337,6 @@ function Gamehome() {
             scaleX={20}
             scaleY={1}
             text="Привет! Я говорю по-русски! :)"
-            fill="#766A6A"
           />
         </CharacterBox>
         <CTAcontainer>
