@@ -230,7 +230,6 @@ const CharacterBox = styled(Row)`
 
 const StyledCharacter = styled.div`
   margin-left: 18%;
-  margin-top: 4%;
   paddng: 0;
   filter: drop-shadow(0px 10px 30px rgba(112, 63, 40, 0.55));
 
