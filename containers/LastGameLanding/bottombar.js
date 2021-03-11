@@ -7,8 +7,6 @@ import copy from 'copy-to-clipboard';
 import { useIsAtBottom } from 'hooks';
 import { Row, Button, Toasts } from 'components';
 
-import SpeechBalloon from 'components/speech-balloon';
-
 const Footer = styled(Row)`
   position: absolute;
   justify-content: space-between;
@@ -44,7 +42,6 @@ const FooterButtonRow = styled(Row)`
   }
 
   @media (max-height: 568px), (max-width: 400px) {
-    flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
 

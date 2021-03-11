@@ -29,7 +29,6 @@ function Index() {
       </Page>
       <Page fullHeight>
         <GameLanding
-          background="#550C67"
           title="UI Interface"
           developer=""
           items={[<GameMenu />]}
@@ -40,7 +39,6 @@ function Index() {
       </Page>
       <Page fullHeight>
         <LastGameLanding
-          background="#26536C"
           title="Lore Translation"
           developer=""
           mobileTitle="Lore Translation"

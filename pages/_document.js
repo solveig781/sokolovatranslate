@@ -131,7 +131,12 @@ export default class DefaultDocument extends Document {
           <link
             async
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+          />
+          <link
+            async
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@;400;500;700&display=swap"
           />
         </Head>
         <body>

@@ -37,52 +37,89 @@ const Container = styled(Col)`
   }
 `;
 
-const Text = styled(Col)`
+const BlueBlob = styled(Col)`
+  width:100%
+  height:100%;
   position: absolute;
+  top:-12%;
+`;
+const ScrollContainer = styled(Col)`
   z-index: 1;
-  font-family: 'Press Start 2P';
+  filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.25));
+  margin-left: auto;
+  margin-tight: auto;
+  left: 0;
+  right: 0;
 
-  width: 50%;
-  line-height: 18px;
-  top: 22%;
-  left: 26%;
-
-  @media (max-width: 1000px) {
-    width: 45%;
-    top: 25%;
-    left: 28%;
+  @media (max-width: 620px) {
+    transform: scale(0.8, 1);
   }
 
-  @media (max-width: 890px) {
-    width: 40%;
-    top: 22%;
-    left: 32%;
-  }
-  @media (max-width: 510px) {
-    width: 35%;
-    top: 20%;
-    left: 35%;
+  @media (max-width: 500px) {
+    transform: scale(0.7, 1.1);
   }
 
   @media (max-width: 450px) {
-    width: 31%;
+    transform: scale(0.6, 1);
+  }
+  @media (max-width: 375px) {
+    transform: scale(0.55, 0.9);
+  }
+  @media (max-width: 340px) {
+    transform: scale(0.5, 0.9);
+  }
+`;
 
-    top: 17%;
-    left: 36%;
+const Text = styled(Col)`
+  position: absolute;
+  font-family: 'Press Start 2P';
+  z-index: 10;
+
+  width: 62%;
+  line-height: 18px;
+  top: 19%;
+  left: 22%;
+
+  @media (max-width: 1000px) {
+    width: 54%;
+    top: 22%;
+    left: 24%;
+  }
+
+  @media (max-width: 890px) {
+    width: 56%;
+    top: 22%;
+    left: 24%;
+  }
+
+  @media (max-width: 620px) {
+    width: 50%;
+    top: 19%;
+    left: 27%;
+  }
+  @media (max-width: 500px) {
+    width: 42%;
+    top: 15%;
+    left: 31%;
+  }
+
+  @media (max-width: 450px) {
+    width: 35%;
+    top: 12%;
+    left: 33%;
   }
 
   @media (max-width: 375px) {
-    width: 28%;
-
-    top: 19%;
-    left: 38%;
+    width: 31%;
+    top: 15%;
+    left: 36%;
   }
 
   ${S6} {
     font-size: 9px;
     color: #462200 !important;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
 
     @media (max-width: 1000px) {
       font-size: 8px;
@@ -155,7 +192,12 @@ function Lore() {
           кто срывали цвток, на веки распростились со своей душой...
         </S6>
       </Text>
-      <img width="723" height="479" alt="Lore Example" src="scrollpic.png" />
+      <ScrollContainer>
+        <img width="600" height="400" alt="Lore Example" src="scrollpic.png" />
+      </ScrollContainer>
+      <BlueBlob>
+        <img width="707" height="543" alt="Blob" src="blueblob3.png" />
+      </BlueBlob>
     </Container>
   );
 }

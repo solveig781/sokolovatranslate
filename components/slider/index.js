@@ -31,7 +31,6 @@ const BigText = styled(S3)`
 const InfoContainer = styled(Col)`
   width: 65%;
   height: 100%;
-  background: rgba(237, 245, 225, 0.2);
 
   position: relative;
   left: 100vw;
@@ -117,6 +116,7 @@ const MobileGameHeader = styled(Col)`
   align-items: center;
   letter-spacing: 0.05em;
   min-height: 60px;
+  z-index: 1;
 
   @media (min-width: 768px) {
     display: none;
@@ -125,6 +125,9 @@ const MobileGameHeader = styled(Col)`
   ${H3} {
     font-size: 28px;
     margin-bottom: 0;
+    @media (min-width: 450px) and (max-width: 500px) {
+      margin-top: 40px;
+    }
   }
 
   ${Button} {
